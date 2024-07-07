@@ -14,7 +14,9 @@ export function SiteNavigation() {
     <div className="flex justify-center items-center">
       <nav className="flex justify-between p-10 w-full max-w-7xl">
         <div>
-          <span className="text-xl font-bold">ReactJS ID</span>
+          <Link to="/">
+            <span className="text-xl font-bold">ReactJS ID</span>
+          </Link>
         </div>
         <ul className="flex gap-10 text-slate-400">
           {navigationItems.map((navItem) => (

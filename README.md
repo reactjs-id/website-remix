@@ -1,4 +1,6 @@
-# Welcome to Remix!
+# ReactJS Indonesia Website: Remix
+
+[remix.reactjs.id](https://remix.reactjs.id)
 
 - 📖 [Remix docs](https://remix.run/docs)
 
@@ -7,7 +9,7 @@
 Run the dev server:
 
 ```shellscript
-npm run dev
+bun dev
 ```
 
 ## Deployment
@@ -15,7 +17,7 @@ npm run dev
 First, build your app for production:
 
 ```sh
-npm run build
+bun build
 ```
 
 Then run the app in production mode:
@@ -30,7 +32,7 @@ Now you'll need to pick a host to deploy it to.
 
 If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
 
-Make sure to deploy the output of `npm run build`
+Make sure to deploy the output of `bun build`
 
 - `build/server`
 - `build/client`

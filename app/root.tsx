@@ -5,6 +5,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+
+import { SiteNavigation } from "~/components/shared/site-navigation";
+import { SiteFooter } from "~/components/shared/site-footer";
+
 import "./tailwind.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -16,8 +20,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-[#15181D] text-slate-50">
+        <SiteNavigation />
         {children}
+        <SiteFooter />
+
         <ScrollRestoration />
         <Scripts />
       </body>

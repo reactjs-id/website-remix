@@ -8,7 +8,11 @@ export default function About() {
       <section className="max-w-7xl w-full px-16 text-[#C7CBD1] flex flex-col gap-10 md:gap-12 md:text-3xl">
         <div className="flex flex-col gap-2">
           <h1 className="text-white font-bold text-4xl md:text-6xl">
-            <img src="/images/logos/reactjsid.svg" alt="React JS ID" className="w-16 h-9 object-contain object-left" />
+            <img
+              src="/images/logos/reactjsid.svg"
+              alt="React JS ID"
+              className="w-16 h-9 object-contain object-left"
+            />
             Tentang Kami
           </h1>
           <p>
@@ -25,19 +29,25 @@ export default function About() {
         <div className="flex flex-col md:flex-row md:max-w-4xl w-full justify-between gap-8">
           <div className="flex flex-col gap-1">
             <MemberIcon width={46} height={46} />
-            <p className="font-medium text-xl md:text-4xl text-white">100.000+</p>
+            <p className="font-medium text-xl md:text-4xl text-white">
+              100.000+
+            </p>
             <p>Member telegram</p>
           </div>
           <div className="md:w-[1px] h-[1px] w-full md:h-full bg-[#3E4F6B]" />
           <div className="flex flex-col gap-1">
             <EventsIcon width={46} height={46} />
-            <p className="font-medium text-xl md:text-4xl text-white">29 Events</p>
+            <p className="font-medium text-xl md:text-4xl text-white">
+              29 Events
+            </p>
             <p>Acara diselenggarakan</p>
           </div>
           <div className="md:w-[1px] h-[1px] w-full md:h-full bg-[#3E4F6B]" />
           <div className="flex flex-col gap-1">
             <ArticleIcon width={46} height={46} />
-            <p className="font-medium text-xl md:text-4xl text-white">362 Articles</p>
+            <p className="font-medium text-xl md:text-4xl text-white">
+              362 Articles
+            </p>
             <p>Artikel tertulis</p>
           </div>
         </div>

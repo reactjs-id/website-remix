@@ -2,6 +2,7 @@
 
 - URL: [remix.reactjs.id](https://remix.reactjs.id)
 - UI Design: <https://figma.com/design/gMo6kSyNTFRI4NE7ZRLMIF/%E2%9A%9B%EF%B8%8F-React-ID-Design-Draft?node-id=497-32376&t=vqBqn1CzlgbJ4peJ-1>
+- Brand Design: <https://figma.com/design/WvZuXYc09qZQJW0DQ7hxM2/ReactJS-ID-General-Design-Assets>
 
 ## References
 

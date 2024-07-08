@@ -1,6 +1,4 @@
-import { ArticleIcon } from "~/components/icons/article-icon";
-import { EventsIcon } from "~/components/icons/event-icon";
-import { MemberIcon } from "~/components/icons/member-icon";
+import { CalendarCheck2, Newspaper, Users } from "lucide-react";
 
 export default function About() {
   return (
@@ -28,7 +26,7 @@ export default function About() {
         </p>
         <div className="flex flex-col md:flex-row md:max-w-4xl w-full justify-between gap-8">
           <div className="flex flex-col gap-1">
-            <MemberIcon width={46} height={46} />
+            <Users className="text-white w-6 h-6 md:w-12 md:h-12" />
             <p className="font-medium text-xl md:text-4xl text-white">
               100.000+
             </p>
@@ -36,7 +34,7 @@ export default function About() {
           </div>
           <div className="md:w-[1px] h-[1px] w-full md:h-full bg-[#3E4F6B]" />
           <div className="flex flex-col gap-1">
-            <EventsIcon width={46} height={46} />
+            <CalendarCheck2 className="w-6 h-6 md:w-12 md:h-12 text-white" />
             <p className="font-medium text-xl md:text-4xl text-white">
               29 Events
             </p>
@@ -44,7 +42,7 @@ export default function About() {
           </div>
           <div className="md:w-[1px] h-[1px] w-full md:h-full bg-[#3E4F6B]" />
           <div className="flex flex-col gap-1">
-            <ArticleIcon width={46} height={46} />
+            <Newspaper className="w-6 h-6 md:w-12 md:h-12 text-white" />
             <p className="font-medium text-xl md:text-4xl text-white">
               362 Articles
             </p>

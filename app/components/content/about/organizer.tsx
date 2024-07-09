@@ -1,15 +1,15 @@
 import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
-import { pengurusData } from "~/data/about";
-import type { PengurusType } from "~/types/about";
+import { organizerData } from "~/data/about";
+import type { OrganizerType } from "~/types/about";
 
-export const AboutPengurus = () => {
+export const AboutOrganizer = () => {
   return (
     <section className="max-w-7xl w-full px-16 text-[#C7CBD1] flex flex-col gap-10 md:gap-12 md:text-3xl">
       <h2 className="font-semibold text-4xl text-white">Pengurus</h2>
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {pengurusData.map(({ fullName, role, image }, index) => (
+        {organizerData.map(({ fullName, role, image }, index) => (
           <li key={fullName + index}>
-            <PengurusCard fullName={fullName} image={image} role={role} />
+            <OrganizerCard fullName={fullName} image={image} role={role} />
           </li>
         ))}
       </ul>
@@ -17,7 +17,7 @@ export const AboutPengurus = () => {
   );
 };
 
-const PengurusCard = ({ fullName, image, role }: PengurusType) => {
+const OrganizerCard = ({ fullName, image, role }: OrganizerType) => {
   return (
     <article className="flex flex-row items-center gap-4">
       <Avatar className="w-16 h-16">

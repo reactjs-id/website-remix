@@ -1,6 +1,6 @@
-import type { PengurusType } from "~/types/about";
+import type { OrganizerType } from "~/types/about";
 
-export const pengurusData: PengurusType[] = [
+export const organizerData: OrganizerType[] = [
   {
     fullName: "Dzaki",
     role: "kontributor open source",

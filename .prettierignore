@@ -1,0 +1,4 @@
+# Ignore artifacts:
+# Let the Prettier CLI and editors know which files to not format
+build
+.vscode

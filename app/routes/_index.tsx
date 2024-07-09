@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 
-import iconReactID from "~/assets/logo-reactjsid.svg";
-import HERO_PHOTOS from "~/constants/hero-photos";
+import logo from "~/assets/logo-reactjsid.svg";
+import heroPhotos from "~/data/hero-photos";
 
 export const meta: MetaFunction = () => {
   return [
@@ -18,7 +18,7 @@ export default function IndexRoute() {
   return (
     <>
       <section className="xs:pb-12 xs:pt-14 lg:pb-24 lg:pt-28 flex flex-col items-center gap-8">
-        <img src={iconReactID} alt="" />
+        <img src={logo} alt="" />
         <h1 className="xs:text-4xl lg:text-8xl font-bold text-center text-balance">
           <span>Komunitas Developer</span>
           <br />
@@ -33,7 +33,7 @@ export default function IndexRoute() {
 
       <section className="w-full overflow-x-scroll overflow-y-hidden xs:mb-20 lg:mb-32">
         <ul className="flex justify-between xs:gap-2 lg:gap-8 -mx-20">
-          {HERO_PHOTOS.map((photo, index) => (
+          {heroPhotos.map((photo, index) => (
             <li
               key={photo.slug}
               className={`h-auto py-3 ${

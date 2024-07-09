@@ -1,4 +1,4 @@
-const HERO_PHOTOS = [
+const heroPhotos = [
   {
     slug: "hero-photo-1",
     text: "Photo 1",
@@ -26,4 +26,4 @@ const HERO_PHOTOS = [
   },
 ];
 
-export default HERO_PHOTOS;
+export default heroPhotos;

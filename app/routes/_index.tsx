@@ -1,6 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
 
-import logo from "~/assets/logo-reactjsid.svg";
 import heroPhotos from "~/data/hero-photos";
 
 export const meta: MetaFunction = () => {
@@ -18,7 +17,11 @@ export default function IndexRoute() {
   return (
     <>
       <section className="xs:pb-12 xs:pt-14 lg:pb-24 lg:pt-28 flex flex-col items-center gap-8">
-        <img src={logo} alt="" />
+        <img
+          src="./images/logos/reactjsid.svg"
+          alt=""
+          style={{ width: 107, height: 55 }}
+        />
         <h1 className="xs:text-4xl lg:text-8xl font-bold text-center text-balance">
           <span>Komunitas Developer</span>
           <br />

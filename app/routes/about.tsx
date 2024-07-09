@@ -1,10 +1,7 @@
-const About = () => {
+export default function AboutRoute() {
   return (
     <div>
-      <h1>Tentang Kami</h1>
-      <p>Welcome to our website!</p>
+      <h1>About</h1>
     </div>
   )
 }
-
-export default About

@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Index() {
+export default function IndexRoute() {
   const heroPhotos = [
     { slug: "hero-photo-1", text: "Photo 1", url: "" },
     { slug: "hero-photo-2", text: "Photo 2", url: "" },

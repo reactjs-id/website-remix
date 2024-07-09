@@ -3,11 +3,11 @@ import { Link } from "@remix-run/react";
 export function SiteNavigation() {
   const navigationItems = [
     { path: "/about", text: "Tentang Kami" },
-    { path: "/blog", text: "Blog" },
     { path: "/events", text: "Acara" },
     { path: "/chapters", text: "Chapters" },
     { path: "/resources", text: "Materi" },
     { path: "/merchandise", text: "Merchandise" },
+    { path: "/blog", text: "Blog" },
   ];
 
   return (

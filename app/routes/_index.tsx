@@ -2,7 +2,11 @@ import type { MetaFunction } from "@remix-run/node";
 import Networking from "~/components/home/networking";
 import { Spacer } from "~/components/spacer";
 
+import { MoveRight } from "lucide-react";
 import heroPhotos from "~/data/hero-photos";
+
+import EventItem, { fakerEvents } from "~/components/event-item";
+import { Button } from "~/components/ui/button";
 
 export const meta: MetaFunction = () => {
   return [
@@ -35,7 +39,6 @@ export default function IndexRoute() {
           React dan ekosistemnya
         </p>
       </section>
-
       <section className="w-full overflow-x-scroll overflow-y-hidden xs:mb-20 lg:mb-32">
         <ul className="flex justify-between xs:gap-2 lg:gap-8 -mx-20">
           {heroPhotos.map((photo, index) => (
@@ -60,6 +63,41 @@ export default function IndexRoute() {
       <Spacer />
       <Networking />
       <Spacer />
+      <section className="container flex-col !px-20 mt-[180px]">
+        <div className="flex items-center bg-transparent border-none text-white relative">
+          <div className="space-y-10">
+            <h2 className="flex gap-3 text-6xl font-bold items-end leading-[52px]">
+              Networking
+              <span className="text-2xl font-normal leading-6">dengan</span>
+              <img
+                className="w-[44px] h-[23px]"
+                src="./images/logos/reactjsid.svg"
+                alt="reactjsid-logo"
+              />
+            </h2>
+            <p className="max-w-[650px] text-balance text-2xl leading-8">
+              Di reactjs.id, Anda akan bertemu dengan para profesional dari
+              berbagai latar belakang dan tingkat pengalaman
+            </p>
+          </div>
+          <img
+            className="absolute -right-16 h-[230px]"
+            src="./images/events-category.svg"
+            alt="event-category-image"
+          />
+        </div>
+        <div className="my-20 flex flex-col gap-10 items">
+          {fakerEvents.map((item, index) => (
+            <EventItem key={index} {...item} />
+          ))}
+        </div>
+        <div>
+          <Button className="bg-[#1B212A] border border-[#2E3137] justify-start text-center px-[37px] !py-[28px] rounded-2xl">
+            <span className="text-xl">Lihat semua acara</span>
+            <MoveRight className="ml-2" />
+          </Button>
+        </div>
+      </section>
     </>
   );
 }

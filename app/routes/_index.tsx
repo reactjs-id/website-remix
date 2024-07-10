@@ -1,49 +1,53 @@
-import type {MetaFunction} from '@remix-run/node'
-import Networking from '~/components/home/networking'
-import {Spacer} from '~/components/spacer'
+import type { MetaFunction } from "@remix-run/node";
+import Networking from "~/components/home/networking";
+import { Spacer } from "~/components/spacer";
+
+import heroPhotos from "~/data/hero-photos";
 
 export const meta: MetaFunction = () => {
   return [
-    {title: 'ReactJS Indonesia'},
+    { title: "ReactJS Indonesia" },
     {
-      name: 'description',
+      name: "description",
       content:
-        'Komunitas developer React dan React Native terbesar di Indonesia',
+        "Komunitas developer React dan React Native terbesar di Indonesia",
     },
-  ]
-}
+  ];
+};
 
 export default function IndexRoute() {
-  const heroPhotos = [
-    {slug: 'hero-photo-1', text: 'Photo 1', url: ''},
-    {slug: 'hero-photo-2', text: 'Photo 2', url: ''},
-    {slug: 'hero-photo-3', text: 'Photo 3', url: ''},
-    {slug: 'hero-photo-4', text: 'Photo 4', url: ''},
-    {slug: 'hero-photo-5', text: 'Photo 5', url: ''},
-  ]
-
   return (
-    <div>
-      <section className="py-20 flex flex-col items-center gap-8">
-        <h1 className="text-8xl font-bold text-center text-balance">
+    <>
+      <section className="xs:pb-12 xs:pt-14 lg:pb-24 lg:pt-28 flex flex-col items-center gap-8">
+        <img
+          src="./images/logos/reactjsid.svg"
+          alt=""
+          style={{ width: 107, height: 55 }}
+        />
+        <h1 className="xs:text-4xl lg:text-8xl font-bold text-center text-balance">
           <span>Komunitas Developer</span>
           <br />
           <span>ReactJS Indonesia</span>
         </h1>
-        <p className="text-2xl text-slate-400 text-center text-balance max-w-6xl">
+        <p className="xs:text-sm sm:text-2xl text-slate-400 text-center text-balance max-w-6xl">
           Bergabunglah dengan Komunitas Developer React dan React Native
           Indonesia! Hadiri Meetup Bulanan dan dapatkan wawasan terbaru tentang
           React dan ekosistemnya
         </p>
       </section>
 
-      <section>
-        <ul className="flex gap-5">
-          {heroPhotos.map(heroPhoto => (
-            <li key={heroPhoto.slug}>
+      <section className="w-full overflow-x-scroll overflow-y-hidden xs:mb-20 lg:mb-32">
+        <ul className="flex justify-between xs:gap-2 lg:gap-8 -mx-20">
+          {heroPhotos.map((photo, index) => (
+            <li
+              key={photo.slug}
+              className={`h-auto py-3 ${
+                index % 2 === 0 ? "-rotate-3" : "rotate-3"
+              }`}
+            >
               <img
-                src={heroPhoto.url}
-                alt={heroPhoto.text}
+                src={photo.url}
+                alt={photo.text}
                 width={400}
                 height={270}
                 className="bg-slate-700 rounded-3xl"
@@ -52,9 +56,10 @@ export default function IndexRoute() {
           ))}
         </ul>
       </section>
+
       <Spacer />
       <Networking />
       <Spacer />
-    </div>
-  )
+    </>
+  );
 }

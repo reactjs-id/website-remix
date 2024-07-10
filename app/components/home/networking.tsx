@@ -1,9 +1,9 @@
-import {Spacer} from '~/components/spacer'
+import { Spacer } from "~/components/spacer";
 
 export default function Networking() {
   return (
     <section className="container">
-      <div className="flex items-start flex-col px-[43px]">
+      <div className="flex items-start flex-col grow px-[43px]">
         <div className="flex grow self-stretch relative">
           <div className="flex flex-col gap-[42px] max-w-2xl py-10">
             <div className="flex gap-2.5 items-end">
@@ -13,6 +13,12 @@ export default function Networking() {
               <span className="text-[#C7CBD1] text-2xl font-medium">
                 dengan
               </span>
+              <img
+                className="mb-1"
+                src="./images/logos/reactjsid.svg"
+                alt="reactjs.id logo"
+                style={{ width: 44, height: 23 }}
+              />
             </div>
 
             <p className="text-2xl text-[#C7CBD1] font-medium max-w-prose">
@@ -178,7 +184,32 @@ export default function Networking() {
 
         <Spacer size="xs" />
 
-        <div className="flex flex-col items-center gap-[52px]"></div>
+        <div className="flex flex-col justify-center gap-[52px] grow self-stretch">
+          {Array.from({ length: 3 }).map((_, index) => (
+            <div key={index} className="flex justify-center gap-x-10">
+              <img
+                src="https://opengraph.githubassets.com/5606ef4230a45491b4371563fde3b4202e1b6671ab555863b586161dee1299f7/reactjs/id.react.dev"
+                alt="ReactJS Indonesia event"
+                className="h-[193px] rounded-2xl object-cover drop-shadow-[0_4px_20px_0_rgba(17,29,44,0.48)]"
+                width={342}
+              />
+              <div className="flex flex-col gap-8 w-full justify-center">
+                <div className="flex flex-col gap-6">
+                  <h3 className="text-4xl font-medium text-white">
+                    Meetup IRL #24
+                  </h3>
+                  <span className="text-xl text-[#8E96A5]">
+                    📅 Kamis depan - pkl 2.00 siang
+                  </span>
+                </div>
+                <p className="text-xl text-[#C7CBD1]">
+                  Sharing session bersama teman-teman di reactjs.id. Acara
+                  diadakan di Jakarta Barat, Pondok Indah Mall
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
 
         <Spacer size="xs" />
 
@@ -188,5 +219,5 @@ export default function Networking() {
         >{`Lihat semua acara ->`}</button>
       </div>
     </section>
-  )
+  );
 }

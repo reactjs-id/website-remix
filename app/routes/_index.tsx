@@ -1,24 +1,26 @@
-import type { MetaFunction } from "@remix-run/node";
+import type {MetaFunction} from '@remix-run/node'
+import Networking from '~/components/home/networking'
+import {Spacer} from '~/components/spacer'
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "ReactJS Indonesia" },
+    {title: 'ReactJS Indonesia'},
     {
-      name: "description",
+      name: 'description',
       content:
-        "Komunitas developer React dan React Native terbesar di Indonesia",
+        'Komunitas developer React dan React Native terbesar di Indonesia',
     },
-  ];
-};
+  ]
+}
 
 export default function IndexRoute() {
   const heroPhotos = [
-    { slug: "hero-photo-1", text: "Photo 1", url: "" },
-    { slug: "hero-photo-2", text: "Photo 2", url: "" },
-    { slug: "hero-photo-3", text: "Photo 3", url: "" },
-    { slug: "hero-photo-4", text: "Photo 4", url: "" },
-    { slug: "hero-photo-5", text: "Photo 5", url: "" },
-  ];
+    {slug: 'hero-photo-1', text: 'Photo 1', url: ''},
+    {slug: 'hero-photo-2', text: 'Photo 2', url: ''},
+    {slug: 'hero-photo-3', text: 'Photo 3', url: ''},
+    {slug: 'hero-photo-4', text: 'Photo 4', url: ''},
+    {slug: 'hero-photo-5', text: 'Photo 5', url: ''},
+  ]
 
   return (
     <div>
@@ -37,7 +39,7 @@ export default function IndexRoute() {
 
       <section>
         <ul className="flex gap-5">
-          {heroPhotos.map((heroPhoto) => (
+          {heroPhotos.map(heroPhoto => (
             <li key={heroPhoto.slug}>
               <img
                 src={heroPhoto.url}
@@ -50,6 +52,9 @@ export default function IndexRoute() {
           ))}
         </ul>
       </section>
+      <Spacer />
+      <Networking />
+      <Spacer />
     </div>
-  );
+  )
 }

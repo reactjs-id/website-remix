@@ -10,7 +10,7 @@ const joinCommunityPhotos = Array.from({ length: 12 }).map((_, index) => ({
   url: "https://picsum.photos/seed/picsum/200/200",
 }));
 
-const cssContainer = "flex gap-4 xs:flex-col lg:flex-row -mx-12";
+const cssContainer = "flex gap-4 xs:flex-col lg:flex-row xs:mx-1 lg:-mx-12";
 
 export function JoinCommunity() {
   return (

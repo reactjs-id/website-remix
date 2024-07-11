@@ -31,7 +31,7 @@ export default function Networking() {
             </p>
           </div>
 
-          <div className="absolute right-0 inset-y-0 h-fit">
+          <div className="absolute -right-16 inset-y-0 h-fit">
             <svg
               width="709"
               height="237"

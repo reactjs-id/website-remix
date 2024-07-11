@@ -9,14 +9,14 @@ type EventItemProps = {
 
 function EventItem({ title, date, description, imgUrl }: EventItemProps) {
   return (
-    <div className="flex justify-center gap-x-10">
+    <div className="flex items-center gap-x-10">
       <img
         src={imgUrl}
         alt="ReactJS Indonesia event"
         className="h-[193px] rounded-2xl object-cover drop-shadow-[0_4px_20px_0_rgba(17,29,44,0.48)]"
         width={342}
       />
-      <div className="flex flex-col gap-8 w-full max-w-2xl justify-center">
+      <div className="flex flex-col gap-8 w-full max-w-3xl justify-center">
         <div className="flex flex-col gap-6">
           <h3 className="text-4xl font-medium text-white truncate">{title}</h3>
           <div className="text-xl flex items-center gap-1.5 text-[#8E96A5]">

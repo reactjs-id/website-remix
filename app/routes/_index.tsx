@@ -2,11 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import Networking from "~/components/home/networking";
 import { Spacer } from "~/components/spacer";
 
-import { MoveRight } from "lucide-react";
 import heroPhotos from "~/data/hero-photos";
-
-import EventItem, { fakerEvents } from "~/components/event-item";
-import { Button } from "~/components/ui/button";
 
 export const meta: MetaFunction = () => {
   return [
@@ -63,7 +59,7 @@ export default function IndexRoute() {
       <Spacer />
       <Networking />
       <Spacer />
-      <section className="container flex-col !px-20 mt-[180px]">
+      {/* <section className="container flex-col !px-20 mt-[180px]">
         <div className="flex items-center bg-transparent border-none text-white relative">
           <div className="space-y-10">
             <h2 className="flex gap-3 text-6xl font-bold items-end leading-[52px]">
@@ -97,7 +93,7 @@ export default function IndexRoute() {
             <MoveRight className="ml-2" />
           </Button>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

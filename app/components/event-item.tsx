@@ -9,23 +9,28 @@ type EventItemProps = {
 
 function EventItem({ title, date, description, imgUrl }: EventItemProps) {
   return (
-    <div className="flex gap-10 items-center text-white">
-      <div className="rounded-xl overflow-hidden lg:min-w-[340px]">
-        <img src={imgUrl} alt={`photo-${title}`} />
-      </div>
-      <div className="max-w-[700px]">
-        <h2 className="text-4xl truncate">{title}</h2>
-        <span className="flex gap-2 items-center text-[#8E96A5] text-md mt-3">
-          <CalendarFold size={21} />
-          <p>{date}</p>
-        </span>
-        <p className="text-[#C7CBD1] mt-8 line-clamp-2">{description}</p>
+    <div className="flex justify-center gap-x-10">
+      <img
+        src={imgUrl}
+        alt="ReactJS Indonesia event"
+        className="h-[193px] rounded-2xl object-cover drop-shadow-[0_4px_20px_0_rgba(17,29,44,0.48)]"
+        width={342}
+      />
+      <div className="flex flex-col gap-8 w-full max-w-2xl justify-center">
+        <div className="flex flex-col gap-6">
+          <h3 className="text-4xl font-medium text-white truncate">{title}</h3>
+          <div className="text-xl flex items-center gap-1.5 text-[#8E96A5]">
+            <CalendarFold size={21} />
+            <p>{date}</p>
+          </div>
+        </div>
+        <p className="text-xl text-[#C7CBD1] line-clamp-2">{description}</p>
       </div>
     </div>
   );
 }
 
-export const fakerEvents = [
+const fakerEvents = [
   {
     title: "Meetup IRL #24",
     date: "Kamis depan - pkl 2.00 siang",
@@ -49,4 +54,4 @@ export const fakerEvents = [
   },
 ];
 
-export default EventItem;
+export { EventItem, fakerEvents };

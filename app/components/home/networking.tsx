@@ -1,4 +1,7 @@
 import { Spacer } from "~/components/spacer";
+import { MoveRight } from "lucide-react";
+import { EventItem, fakerEvents } from "~/components/event-item";
+import { Button } from "~/components/ui/button";
 
 export default function Networking() {
   return (
@@ -185,38 +188,17 @@ export default function Networking() {
         <Spacer size="xs" />
 
         <div className="flex flex-col justify-center gap-[52px] grow self-stretch">
-          {Array.from({ length: 3 }).map((_, index) => (
-            <div key={index} className="flex justify-center gap-x-10">
-              <img
-                src="https://opengraph.githubassets.com/5606ef4230a45491b4371563fde3b4202e1b6671ab555863b586161dee1299f7/reactjs/id.react.dev"
-                alt="ReactJS Indonesia event"
-                className="h-[193px] rounded-2xl object-cover drop-shadow-[0_4px_20px_0_rgba(17,29,44,0.48)]"
-                width={342}
-              />
-              <div className="flex flex-col gap-8 w-full justify-center">
-                <div className="flex flex-col gap-6">
-                  <h3 className="text-4xl font-medium text-white">
-                    Meetup IRL #24
-                  </h3>
-                  <span className="text-xl text-[#8E96A5]">
-                    📅 Kamis depan - pkl 2.00 siang
-                  </span>
-                </div>
-                <p className="text-xl text-[#C7CBD1]">
-                  Sharing session bersama teman-teman di reactjs.id. Acara
-                  diadakan di Jakarta Barat, Pondok Indah Mall
-                </p>
-              </div>
-            </div>
+          {fakerEvents.map((event, index) => (
+            <EventItem key={index} {...event} />
           ))}
         </div>
 
         <Spacer size="xs" />
 
-        <button
-          type="button"
-          className="text-2xl text-white py-7 px-9 bg-[#1B212A] border border-[#2E3137] rounded-[20px]"
-        >{`Lihat semua acara ->`}</button>
+        <Button className="bg-[#1B212A] border border-[#2E3137] justify-start text-center px-[37px] !py-[28px] rounded-2xl">
+          <span className="text-xl">Lihat semua acara</span>
+          <MoveRight className="ml-2" />
+        </Button>
       </div>
     </section>
   );

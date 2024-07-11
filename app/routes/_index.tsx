@@ -1,9 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
-import Networking from "~/components/home/networking";
-import { Spacer } from "~/components/spacer";
 
 import { MoveRight } from "lucide-react";
 import heroPhotos from "~/data/hero-photos";
+import { JoinCommunity } from "~/components/join-community";
 
 import EventItem, { fakerEvents } from "~/components/event-item";
 import { Button } from "~/components/ui/button";
@@ -60,9 +59,6 @@ export default function IndexRoute() {
         </ul>
       </section>
 
-      <Spacer />
-      <Networking />
-      <Spacer />
       <section className="container flex-col !px-20 mt-[180px]">
         <div className="flex items-center bg-transparent border-none text-white relative">
           <div className="space-y-10">
@@ -97,6 +93,10 @@ export default function IndexRoute() {
             <MoveRight className="ml-2" />
           </Button>
         </div>
+      </section>
+
+      <section>
+        <JoinCommunity />
       </section>
     </>
   );

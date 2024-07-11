@@ -1,7 +1,6 @@
 import { MoveRight } from "lucide-react";
 import { Link } from "@remix-run/react";
 
-import indonesiaMapSvg from "~/assets/map.svg";
 import indonesiaMap from "~/assets/map.png";
 import { Button } from "./ui/button";
 
@@ -24,13 +23,7 @@ export default function Collaboration() {
         indonesia berbagi wawasan dan pengetahuan mengenai ekosistem Reactjs.
       </div>
 
-      <div className="relative">
-        <img src={indonesiaMap} alt="" className="w-full h-full" />
-      </div>
-      <div className=" bg-black relative">
-        <img src={indonesiaMapSvg} alt="" className="w-full h-full" />
-        <div className="w-full h-full bg-[#1d232b] opacity-75 absolute top-0" />
-      </div>
+      <img src={indonesiaMap} alt="" className="size-full" />
       <div className="font-medium xs:text-base lg:text-2xl text-[#b1c8e791]">
         member telegram
       </div>

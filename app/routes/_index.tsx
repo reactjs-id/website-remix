@@ -97,18 +97,19 @@ export default function IndexRoute() {
         </div>
       </section>
 
-      <section>
-        <JoinCommunity />
-      </section>
-      <section className="w-full max-w-6xl mx-auto xs:mb-12 lg:mb-32 text-center">
+      <section className="w-full max-w-6xl mx-auto text-center mt-20 lg:mt-52">
         <Collaboration />
       </section>
 
       <img
         src={iconRocket}
-        alt=""
-        className="mx-auto xs:w-28 xs:h-28 lg:w-52 lg:h-52 xs:mt-24 lg:mt-64 xs:mb-12 lg:mb-32"
+        alt="icon rocket"
+        className="mx-auto size-28 lg:size-52 my-20 lg:my-52"
       />
+
+      <section>
+        <JoinCommunity />
+      </section>
     </>
   );
 }

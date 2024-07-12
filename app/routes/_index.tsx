@@ -1,6 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
-
 import { MoveRight } from "lucide-react";
+
+import Collaboration from "~/components/collaboration";
+import iconRocket from "~/assets/icon-rocket.svg";
 import heroPhotos from "~/data/hero-photos";
 import { JoinCommunity } from "~/components/join-community";
 
@@ -94,6 +96,16 @@ export default function IndexRoute() {
           </Button>
         </div>
       </section>
+
+      <section className="w-full max-w-6xl mx-auto text-center mt-20 lg:mt-52">
+        <Collaboration />
+      </section>
+
+      <img
+        src={iconRocket}
+        alt="icon rocket"
+        className="mx-auto size-28 lg:size-52 my-20 lg:my-52"
+      />
 
       <section>
         <JoinCommunity />

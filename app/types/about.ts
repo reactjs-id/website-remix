@@ -8,3 +8,8 @@ export interface MissionType {
   title: string;
   description: string;
 }
+
+export interface OfferType {
+  title: string;
+  description: string;
+}

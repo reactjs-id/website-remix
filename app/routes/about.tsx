@@ -1,4 +1,5 @@
 import { AboutGeneral } from "~/components/content/about/general";
+import { AboutMission } from "~/components/content/about/mission";
 import { AboutOrganizer } from "~/components/content/about/organizer";
 
 export default function AboutRoute() {
@@ -6,6 +7,7 @@ export default function AboutRoute() {
     <div className="flex items-center flex-col py-14 gap-16">
       <AboutGeneral />
       <AboutOrganizer />
+      <AboutMission />
     </div>
   );
 }

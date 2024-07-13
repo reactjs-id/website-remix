@@ -3,6 +3,11 @@ import { Link } from "@remix-run/react";
 
 import Grid from "./Grid";
 import communityPlatforms from "~/data/community-platforms";
+import heroPhotos from "~/data/hero-photos";
+
+interface JoinCommunityPropsType {
+  isImageSlide?: boolean;
+}
 
 const joinCommunityPhotos = Array.from({ length: 12 }).map((_, index) => ({
   slug: `hero-photo-${index}`,
@@ -12,7 +17,7 @@ const joinCommunityPhotos = Array.from({ length: 12 }).map((_, index) => ({
 
 const cssContainer = "flex gap-4 xs:flex-col lg:flex-row xs:mx-1 lg:-mx-12";
 
-export function JoinCommunity() {
+export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
   return (
     <>
       <div className="xs:text-xl lg:text-6xl font-semibold text-center xs:mb-5 lg:mb-10 xs:mt-16 lg:mt-32">
@@ -23,40 +28,64 @@ export function JoinCommunity() {
         di Indonesia di ujung jarimu. <br />
         Temukan kami di platform social media favorit-mu!
       </div>
-      <div className="w-full overflow-x-hidden">
-        <div className={cssContainer}>
-          <Grid type="3x2" photos={joinCommunityPhotos.slice(0, 3)} />
-          <Grid type="2x2" photos={joinCommunityPhotos.slice(3, 6)} />
-          <Grid type="3x2" photos={joinCommunityPhotos.slice(6, 9)} />
-          <Grid type="2x2" photos={joinCommunityPhotos.slice(9, 12)} />
-        </div>
-        <div className="relative">
-          <div className={clsx(cssContainer, "mt-4")}>
-            {joinCommunityPhotos.slice(0, 7).map((photo, index) => (
-              <div
-                key={photo.text}
-                className={clsx(
-                  "aspect-square max-h-36",
-                  index % 3 === 0 ? "basis-1/4" : "basis-1/2",
-                )}
+      {isImageSlide ? (
+        <div className="w-full overflow-x-scroll overflow-y-hidden">
+          <ul className="flex justify-between xs:gap-2 lg:gap-8 -mx-20">
+            {heroPhotos.map((photo, index) => (
+              <li
+                key={photo.slug}
+                className={`h-auto py-3 ${
+                  index % 2 === 0 ? "-rotate-3" : "rotate-3"
+                }`}
               >
                 <img
                   src={photo.url}
-                  alt=""
-                  className="rounded-2xl w-full h-full object-cover"
+                  alt={photo.text}
+                  width={400}
+                  height={270}
+                  className="bg-slate-700 rounded-3xl"
                 />
-              </div>
+              </li>
             ))}
-          </div>
-          <div
-            className="w-full h-10 absolute bottom-0"
-            style={{
-              background:
-                "linear-gradient(180deg, transparent 0%, #15181D 100%)",
-            }}
-          ></div>
+          </ul>
         </div>
-      </div>
+      ) : (
+        <div className="w-full overflow-x-hidden">
+          <div className={cssContainer}>
+            <Grid type="3x2" photos={joinCommunityPhotos.slice(0, 3)} />
+            <Grid type="2x2" photos={joinCommunityPhotos.slice(3, 6)} />
+            <Grid type="3x2" photos={joinCommunityPhotos.slice(6, 9)} />
+            <Grid type="2x2" photos={joinCommunityPhotos.slice(9, 12)} />
+          </div>
+          <div className="relative">
+            <div className={clsx(cssContainer, "mt-4")}>
+              {joinCommunityPhotos.slice(0, 7).map((photo, index) => (
+                <div
+                  key={photo.text}
+                  className={clsx(
+                    "aspect-square max-h-36",
+                    index % 3 === 0 ? "basis-1/4" : "basis-1/2",
+                  )}
+                >
+                  <img
+                    src={photo.url}
+                    alt=""
+                    className="rounded-2xl w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            <div
+              className="w-full h-10 absolute bottom-0"
+              style={{
+                background:
+                  "linear-gradient(180deg, transparent 0%, #15181D 100%)",
+              }}
+            ></div>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-6xl mx-auto xs:pb-12 lg:pb-32 flex justify-center flex-col text-center font-medium text-[#C7CBD1] sm:text-base lg:text-2xl">
         <div className="my-11 mt-24">Gabung di platform kami</div>
         <ul className="grid grid-cols-2 gap-5 xs:px-4 lg:px-24">

@@ -4,6 +4,7 @@ import { AboutGeneral } from "~/components/content/about/general";
 import { AboutMission } from "~/components/content/about/mission";
 import { AboutOffer } from "~/components/content/about/offer";
 import { AboutOrganizer } from "~/components/content/about/organizer";
+import { JoinCommunity } from "~/components/join-community";
 import { Line } from "~/components/line";
 
 export default function AboutRoute() {
@@ -19,6 +20,9 @@ export default function AboutRoute() {
       <AboutCommunity />
       <Line />
       <AboutContact />
+      <div>
+        <JoinCommunity isImageSlide />
+      </div>
     </div>
   );
 }

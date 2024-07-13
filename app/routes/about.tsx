@@ -1,3 +1,4 @@
+import { AboutCommunity } from "~/components/content/about/community";
 import { AboutGeneral } from "~/components/content/about/general";
 import { AboutMission } from "~/components/content/about/mission";
 import { AboutOffer } from "~/components/content/about/offer";
@@ -13,6 +14,8 @@ export default function AboutRoute() {
       <AboutMission />
       <Line />
       <AboutOffer />
+      <Line />
+      <AboutCommunity />
     </div>
   );
 }

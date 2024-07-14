@@ -4,47 +4,47 @@ export const organizerData: OrganizerType[] = [
   {
     fullName: "Dzaki",
     role: "kontributor open source",
-    image: "-",
+    image: "",
   },
   {
     fullName: "M Haidar Hanif",
     role: "kontributor open source",
-    image: "-",
+    image: "",
   },
   {
     fullName: "Resi Respati",
     role: "kontributor open source",
-    image: "-",
+    image: "",
   },
   {
     fullName: "muhfaridzia",
     role: "panelis open source",
-    image: "-",
+    image: "",
   },
   {
     fullName: "Nara",
     role: "kontributor open source",
-    image: "-",
+    image: "",
   },
   {
     fullName: "Yusuf",
     role: "kontributor open source",
-    image: "-",
+    image: "",
   },
   {
     fullName: "Bambang",
     role: "kontributor open source",
-    image: "-",
+    image: "",
   },
   {
     fullName: "Alif",
     role: "kontributor open source",
-    image: "-",
+    image: "",
   },
   {
     fullName: "Gusti",
     role: "kontributor open source",
-    image: "-",
+    image: "",
   },
 ];
 

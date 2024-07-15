@@ -1,9 +1,12 @@
-import {Spacer} from '~/components/spacer'
+import { Spacer } from "~/components/spacer";
+import { MoveRight } from "lucide-react";
+import { EventItem, fakerEvents } from "~/components/event-item";
+import { Button } from "~/components/ui/button";
 
 export default function Networking() {
   return (
     <section className="container">
-      <div className="flex items-start flex-col px-[43px]">
+      <div className="flex items-start flex-col grow px-[43px]">
         <div className="flex grow self-stretch relative">
           <div className="flex flex-col gap-[42px] max-w-2xl py-10">
             <div className="flex gap-2.5 items-end">
@@ -13,6 +16,12 @@ export default function Networking() {
               <span className="text-[#C7CBD1] text-2xl font-medium">
                 dengan
               </span>
+              <img
+                className="mb-1"
+                src="./images/logos/reactjsid.svg"
+                alt="reactjs.id logo"
+                style={{ width: 44, height: 23 }}
+              />
             </div>
 
             <p className="text-2xl text-[#C7CBD1] font-medium max-w-prose">
@@ -22,7 +31,7 @@ export default function Networking() {
             </p>
           </div>
 
-          <div className="absolute right-0 inset-y-0 h-fit">
+          <div className="absolute -right-16 inset-y-0 h-fit">
             <svg
               width="709"
               height="237"
@@ -178,15 +187,19 @@ export default function Networking() {
 
         <Spacer size="xs" />
 
-        <div className="flex flex-col items-center gap-[52px]"></div>
+        <div className="flex flex-col justify-center gap-[52px] grow self-stretch">
+          {fakerEvents.map((event, index) => (
+            <EventItem key={index} {...event} />
+          ))}
+        </div>
 
         <Spacer size="xs" />
 
-        <button
-          type="button"
-          className="text-2xl text-white py-7 px-9 bg-[#1B212A] border border-[#2E3137] rounded-[20px]"
-        >{`Lihat semua acara ->`}</button>
+        <Button className="bg-[#1B212A] border border-[#2E3137] justify-start text-center px-[37px] !py-[28px] rounded-2xl">
+          <span className="text-xl">Lihat semua acara</span>
+          <MoveRight className="ml-2" />
+        </Button>
       </div>
     </section>
-  )
+  );
 }

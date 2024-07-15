@@ -1,4 +1,4 @@
-# Contributing to WargaBantuWarga
+# Contributing to ReactJS Indonesia Website
 
 - [How to contribute](#how-to-contribute)
   - [Finding or creating issues](#finding-or-creating-issues)
@@ -218,17 +218,17 @@ Please open an issue on [`reactjs-id/website-remix`](https://github.com/reactjs-
 
 #### Type of Issue and Issue State
 
-| Label name         | `/website-remix`                                                                  | Description                                                                                                          |
-| ------------------ | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `blocked`          | [search](https://github.com/reactjs-id/website-remix/labels/blocked)              | Issues blocked by something else.                                                                                    |
-| `bug`              | [search](https://github.com/reactjs-id/website-remix/labels/bug)                  | Confirmed bugs or reports that are very likely to be bugs.                                                           |
-| `enhancement`      | [search](https://github.com/reactjs-id/website-remix/labels/enhancement)          | New feature or request.                                                                                              |
-| `epic`             | [search](https://github.com/reactjs-id/website-remix/labels/epic)                 | A master issue thread which contains other smaller issues.                                                           |
-| `good first issue` | [search](https://github.com/reactjs-id/website-remix/labels/good%20first%20issue) | Less complex issues which would be good first issues to work on for users who want to contribute to WargaBantuWarga. |
-| `help wanted`      | [search](https://github.com/reactjs-id/website-remix/labels/help%20wanted)        | Issue that need extra attention.                                                                                     |
-| `invalid`          | [search](https://github.com/reactjs-id/website-remix/labels/invalid)              | Issues which aren't valid (e.g. user errors).                                                                        |
-| `question`         | [search](https://github.com/reactjs-id/website-remix/labels/question)             | More information needs to be collected about these problems or feature requests (e.g. steps to reproduce).           |
-| `wontfix`          | [search](https://github.com/reactjs-id/website-remix/labels/wontfix)              | The WargaBantuWarga team will not fix these issues for now.                                                          |
+| Label name         | `/website-remix`                                                                  | Description                                                                                                                    |
+| ------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `blocked`          | [search](https://github.com/reactjs-id/website-remix/labels/blocked)              | Issues blocked by something else.                                                                                              |
+| `bug`              | [search](https://github.com/reactjs-id/website-remix/labels/bug)                  | Confirmed bugs or reports that are very likely to be bugs.                                                                     |
+| `enhancement`      | [search](https://github.com/reactjs-id/website-remix/labels/enhancement)          | New feature or request.                                                                                                        |
+| `epic`             | [search](https://github.com/reactjs-id/website-remix/labels/epic)                 | A master issue thread which contains other smaller issues.                                                                     |
+| `good first issue` | [search](https://github.com/reactjs-id/website-remix/labels/good%20first%20issue) | Less complex issues which would be good first issues to work on for users who want to contribute to ReactJS Indonesia Website. |
+| `help wanted`      | [search](https://github.com/reactjs-id/website-remix/labels/help%20wanted)        | Issue that need extra attention.                                                                                               |
+| `invalid`          | [search](https://github.com/reactjs-id/website-remix/labels/invalid)              | Issues which aren't valid (e.g. user errors).                                                                                  |
+| `question`         | [search](https://github.com/reactjs-id/website-remix/labels/question)             | More information needs to be collected about these problems or feature requests (e.g. steps to reproduce).                     |
+| `wontfix`          | [search](https://github.com/reactjs-id/website-remix/labels/wontfix)              | The ReactJS Indonesia Website team will not fix these issues for now.                                                          |
 
 #### Topic Categories
 

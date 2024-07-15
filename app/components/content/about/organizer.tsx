@@ -11,7 +11,14 @@ export const AboutOrganizer = () => {
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {organizerData.map(({ fullName, role, image }, index) => (
           <li key={fullName + index}>
-            <OrganizerCard fullName={fullName} image={image} role={role} />
+            <OrganizerCard
+              fullName={fullName}
+              image={
+                image ||
+                `https://api.dicebear.com/9.x/initials/svg?seed=${fullName}`
+              }
+              role={role}
+            />
           </li>
         ))}
       </ul>

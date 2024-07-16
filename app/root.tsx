@@ -22,7 +22,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body className="bg-[#15181D] text-slate-50">
         <SiteNavigation />
-        {children}
+        <main className="min-h-[calc(100vh-304px)]">{children}</main>
         <SiteFooter />
 
         <ScrollRestoration />

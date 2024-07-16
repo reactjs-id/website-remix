@@ -20,9 +20,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-[#15181D] text-slate-50">
+      <body className="bg-[#15181D] text-slate-50 flex flex-col min-h-screen">
         <SiteNavigation />
-        <main className="min-h-[calc(100vh-304px)]">{children}</main>
+        <main className="flex-1">{children}</main>
         <SiteFooter />
 
         <ScrollRestoration />

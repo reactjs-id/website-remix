@@ -3,7 +3,7 @@ import { Navigation } from "./navigation";
 
 export function SiteNavigation() {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center flex-none">
       <nav className="container">
         <Link to="/">
           <span className="text-xl font-bold">ReactJS ID</span>

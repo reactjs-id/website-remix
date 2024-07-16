@@ -3,7 +3,7 @@ import { Navigation } from "./navigation";
 
 export function SiteFooter() {
   return (
-    <footer className="container flex-col mx-auto">
+    <footer className="container flex-col mx-auto gap-14 flex-none">
       <div className="flex items-center justify-between">
         <img
           className="w-[67.44px] h-[31.57px]"

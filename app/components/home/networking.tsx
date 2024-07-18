@@ -5,15 +5,15 @@ import { Button } from "~/components/ui/button";
 
 export default function Networking() {
   return (
-    <section className="container">
-      <div className="flex items-start flex-col grow px-[43px]">
-        <div className="flex grow self-stretch relative">
-          <div className="flex flex-col gap-[42px] max-w-2xl py-10">
-            <div className="flex gap-2.5 items-end">
-              <h2 className="text-6xl font-semibold text-balance">
+    <section className="container !p-4 !lg:p-8">
+      <div className="flex items-start flex-col grow">
+        <div className="flex grow self-stretch relative flex-col lg:flex-row">
+          <div className="flex flex-col gap-5 lg:gap-11 max-w-2xl py-8 lg:py-10 mr-0 lg:-mr-44">
+            <div className="flex lg:gap-2.5 flex-wrap items-end">
+              <h2 className="text-4xl lg:text-6xl font-semibold text-balance">
                 Networking
               </h2>
-              <span className="text-[#C7CBD1] text-2xl font-medium">
+              <span className="text-[#C7CBD1] text-sm lg:text-2xl font-medium">
                 dengan
               </span>
               <img
@@ -24,17 +24,16 @@ export default function Networking() {
               />
             </div>
 
-            <p className="text-2xl text-[#C7CBD1] font-medium max-w-prose">
+            <p className="text-sm lg:text-2xl text-[#C7CBD1] font-medium max-w-prose">
               Di reactjs.id, Anda akan bertemu dengan para profesional
               <br />
               dari berbagai latar belakang dan tingkat pengalaman
             </p>
           </div>
 
-          <div className="absolute -right-16 inset-y-0 h-fit">
+          <div>
             <svg
-              width="709"
-              height="237"
+              className="size-full"
               viewBox="0 0 709 237"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +186,7 @@ export default function Networking() {
 
         <Spacer size="xs" />
 
-        <div className="flex flex-col justify-center gap-[52px] grow self-stretch">
+        <div className="flex flex-col justify-center gap-8 lg:gap-[52px] grow self-stretch">
           {fakerEvents.map((event, index) => (
             <EventItem key={index} {...event} />
           ))}
@@ -195,8 +194,8 @@ export default function Networking() {
 
         <Spacer size="xs" />
 
-        <Button className="bg-[#1B212A] border border-[#2E3137] justify-start text-center px-[37px] !py-[28px] rounded-2xl">
-          <span className="text-xl">Lihat semua acara</span>
+        <Button className="bg-[#1B212A] border border-[#2E3137] justify-start text-center px-4 lg:px-9 py-6 lg:!py-[28px] rounded-2xl">
+          <span className="text-base lg:text-xl">Lihat semua acara</span>
           <MoveRight className="ml-2" />
         </Button>
       </div>

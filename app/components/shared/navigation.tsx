@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 
-const navigationItems = [
+export const navigationItems = [
   { path: "/about", text: "Tentang Kami" },
   { path: "/blog", text: "Blog" },
   { path: "/events", text: "Acara" },

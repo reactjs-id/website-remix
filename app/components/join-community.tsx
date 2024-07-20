@@ -85,27 +85,37 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
           </div>
         </div>
       )}
-
-      <div className="max-w-6xl mx-auto xs:pb-12 lg:pb-32 flex justify-center flex-col text-center font-medium text-[#C7CBD1] sm:text-base lg:text-2xl">
+      <div className="max-w-6xl mx-auto xs:pb-12 lg:pb-32 flex justify-center flex-col text-center font-medium text-lightGray sm:text-base lg:text-2xl">
         <div className="my-11 mt-24">Gabung di platform kami</div>
         <ul className="grid grid-cols-2 gap-5 xs:px-4 lg:px-24">
-          {communityPlatforms.map((platform) => (
-            <li
-              key={platform.link}
-              className="rounded-2xl bg-neutral-800 xs:px-4 lg:px-5 xs:py-4 lg:py-6 border border-neutral-500"
-            >
-              <Link to={platform.link} target="_blank" rel="noreferrer">
-                <div className="flex gap-5 items-center xs:flex-col lg:flex-row">
-                  <img
-                    className="w-11 h-11"
-                    src={`https://cdn.simpleicons.org/${platform.icon.slug}/white`}
-                    alt=""
-                  />
-                  {platform.text}
-                </div>
-              </Link>
-            </li>
-          ))}
+          {communityPlatforms.map((platform) => {
+            const { link, icon, text } = platform;
+            const iconSize = platform.icon.title == "X" ? 37 : 44;
+            return (
+              <li
+                key={link}
+                className="rounded-2xl bg-darkJoinButton place-content-center xs:px-4 lg:px-5 xs:py-4 lg:py-6 border border-darkBorderJoinButton"
+              >
+                <Link to={link} target="_blank" rel="noreferrer">
+                  <div className="flex gap-5 items-center xs:flex-col lg:flex-row color-lightGray">
+                    <svg
+                      key={icon.title}
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="white"
+                      width={iconSize}
+                      height={iconSize}
+                    >
+                      <title>{icon.title}</title>
+                      <path d={icon.path} />
+                    </svg>
+                    {text}
+                  </div>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </>

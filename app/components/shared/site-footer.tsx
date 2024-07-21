@@ -3,14 +3,14 @@ import { Navigation } from "./navigation";
 
 export function SiteFooter() {
   return (
-    <footer className="container flex-col mx-auto gap-14 flex-none">
-      <div className="flex items-center justify-between">
+    <footer className="container flex-col mx-auto gap-14 mt-12 lg:mt-32 !p-4 lg:p-8">
+      <div className="flex items-center justify-between flex-col lg:flex-row">
         <img
           className="w-[67.44px] h-[31.57px]"
           src="./images/logos/reactjsid.svg"
           alt="reactjsid-logo"
         />
-        <Navigation className="gap-16" />
+        <Navigation className="grid lg:flex grid-cols-3 gap-6 lg:gap-16 my-8 lg:my-0" />
         <div className="flex items-center gap-8">
           {[siFacebook, siGithub, siTelegram, siX].map(({ title, path }) => (
             <svg
@@ -28,7 +28,7 @@ export function SiteFooter() {
           ))}
         </div>
       </div>
-      <div className="flex items-end justify-between">
+      <div className="flex items-start lg:items-end justify-between flex-col lg:flex-row gap-4">
         <div className="max-w-[974px] space-y-2">
           <h3 className="text-xl font-bold">ReactJS ID</h3>
           <p className="text-balance">

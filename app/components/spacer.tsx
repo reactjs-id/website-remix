@@ -3,7 +3,7 @@ const spacerSizes = {
   // "2xs": "h-10 lg:h-12",
   xs: "h-20 lg:h-24",
   // sm: "h-32 lg:h-36",
-  base: "h-40 lg:h-60",
+  base: "h-28 lg:h-60",
   // lg: "h-56 lg:h-64",
 };
 

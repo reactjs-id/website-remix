@@ -9,22 +9,25 @@ type EventItemProps = {
 
 function EventItem({ title, date, description, imgUrl }: EventItemProps) {
   return (
-    <div className="flex items-center gap-x-10">
+    <div className="flex items-center gap-1 lg:gap-10 flex-col lg:flex-row">
       <img
         src={imgUrl}
         alt="ReactJS Indonesia event"
-        className="h-[193px] rounded-2xl object-cover drop-shadow-[0_4px_20px_0_rgba(17,29,44,0.48)]"
-        width={342}
+        className="aspect-video w-full lg:w-80 rounded-2xl object-cover drop-shadow-[0_4px_20px_0_rgba(17,29,44,0.48)]"
       />
-      <div className="flex flex-col gap-8 w-full max-w-3xl justify-center">
-        <div className="flex flex-col gap-6">
-          <h3 className="text-4xl font-medium text-white truncate">{title}</h3>
-          <div className="text-xl flex items-center gap-1.5 text-[#8E96A5]">
+      <div className="flex flex-col gap-2 lg:gap-8 w-full max-w-3xl justify-center">
+        <div className="flex flex-col gap-1 lg:gap-6">
+          <h3 className="text-lg lg:text-4xl font-medium text-white truncate text-wrap line-clamp-2 lg:line-clamp-1">
+            {title}
+          </h3>
+          <div className="text-xs lg:text-xl flex items-center gap-1.5 text-[#8E96A5]">
             <CalendarFold size={21} />
             <p>{date}</p>
           </div>
         </div>
-        <p className="text-xl text-[#C7CBD1] line-clamp-2">{description}</p>
+        <p className="text-sm lg:text-xl text-[#C7CBD1] line-clamp-2">
+          {description}
+        </p>
       </div>
     </div>
   );

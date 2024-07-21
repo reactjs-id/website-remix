@@ -1,12 +1,17 @@
 # ReactJS Indonesia Website: Remix
 
-- URL: [remix.reactjs.id](https://remix.reactjs.id)
+Community website of ReactJS Indonesia, built using [Remix](https://remix.run).
+
+Links:
+
+- URL: [remix.reactjs.id](https://remix.reactjs.id) (Coming Soon)
 - UI Design: <https://figma.com/design/gMo6kSyNTFRI4NE7ZRLMIF/%E2%9A%9B%EF%B8%8F-React-ID-Design-Draft?node-id=497-32376&t=vqBqn1CzlgbJ4peJ-1>
 - Brand Design: <https://figma.com/design/WvZuXYc09qZQJW0DQ7hxM2/ReactJS-ID-General-Design-Assets>
 
 ## References
 
 - 📖 [Remix docs](https://remix.run/docs)
+- [shadcn UI](https://ui.shadcn.com)
 
 ## Development
 
@@ -27,7 +32,7 @@ bun build
 Then run the app in production mode:
 
 ```sh
-npm start
+bun start
 ```
 
 Now you'll need to pick a host to deploy it to.

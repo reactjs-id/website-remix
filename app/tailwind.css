@@ -76,5 +76,5 @@
 }
 
 .container {
-    @apply flex justify-between p-10 w-full max-w-7xl
+  @apply flex justify-between p-10 w-full max-w-7xl;
 }

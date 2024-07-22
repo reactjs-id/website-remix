@@ -22,10 +22,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js 14.x
+      - name: Setup Bun
         uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: "1.x"
 
       - name: Install locked dependencies
         run: bun install --frozen-lockfile
@@ -35,12 +33,12 @@ jobs:
         env:
           CI: true
 
-      - name: Lint files
+      - name: Format files
         run: bun run format
         env:
           CI: true
 
-      - name: Lint files
-        run: bun run type-check
+      - name: Type check files
+        run: bun run typecheck
         env:
           CI: true

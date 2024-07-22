@@ -22,10 +22,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js 14.x
+      - name: Setup Bun
         uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: "1.x"
 
       - name: Install locked dependencies
         run: bun install --frozen-lockfile

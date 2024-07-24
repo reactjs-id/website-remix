@@ -13,7 +13,7 @@ export default function Networking() {
               <h2 className="text-4xl lg:text-6xl font-semibold text-balance">
                 Networking
               </h2>
-              <span className="text-lightGray text-sm lg:text-2xl font-medium">
+              <span className="text-brand-gray-lavender text-sm lg:text-2xl font-medium">
                 dengan
               </span>
               <img
@@ -24,7 +24,7 @@ export default function Networking() {
               />
             </div>
 
-            <p className="text-sm lg:text-2xl text-lightGray font-medium max-w-prose">
+            <p className="text-sm lg:text-2xl text-brand-gray-lavender font-medium max-w-prose">
               Di reactjs.id, Anda akan bertemu dengan para profesional
               <br />
               dari berbagai latar belakang dan tingkat pengalaman
@@ -194,7 +194,7 @@ export default function Networking() {
 
         <Spacer size="xs" />
 
-        <Button className="bg-x-black-700 border border-x-black-500 justify-start text-center px-4 lg:px-9 py-6 lg:!py-[28px] rounded-2xl">
+        <Button className="bg-brand-black-washed border border-brand-black-granite justify-start text-center px-4 lg:px-9 py-6 lg:!py-[28px] rounded-2xl">
           <span className="text-base lg:text-xl">Lihat semua acara</span>
           <MoveRight className="ml-2" />
         </Button>

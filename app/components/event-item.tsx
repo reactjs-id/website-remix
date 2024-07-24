@@ -20,12 +20,12 @@ function EventItem({ title, date, description, imgUrl }: EventItemProps) {
           <h3 className="text-lg lg:text-4xl font-medium text-white truncate text-wrap line-clamp-2 lg:line-clamp-1">
             {title}
           </h3>
-          <div className="text-xs lg:text-xl flex items-center gap-1.5 text-x-blue-200">
+          <div className="text-xs lg:text-xl flex items-center gap-1.5 text-brand-gray-cool">
             <CalendarFold size={21} />
             <p>{date}</p>
           </div>
         </div>
-        <p className="text-sm lg:text-xl text-lightGray line-clamp-2">
+        <p className="text-sm lg:text-xl text-brand-gray-lavender line-clamp-2">
           {description}
         </p>
       </div>

@@ -15,6 +15,12 @@ export default {
     extend: {
       colors: {
         lightGray: "#C7CBD1",
+        "x-blue-700": "#3E4F6B",
+        "x-blue-300": "#B1C8E7",
+        "x-blue-200": "#8E96A5",
+        "x-black-900": "#15181D",
+        "x-black-700": "#1B212A",
+        "x-black-500": "#2E3137",
         darkJoinButton: "#20242B",
         darkBorderJoinButton: "#2E3137",
         border: "hsl(var(--border))",

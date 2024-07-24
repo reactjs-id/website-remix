@@ -23,7 +23,7 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
       <div className="xs:text-xl lg:text-6xl font-semibold text-center xs:mb-5 lg:mb-10 xs:mt-16 lg:mt-32">
         Gabung reactjs.id
       </div>
-      <div className="xs:text-base lg:text-2xl text-[#C7CBD1] font-medium text-center xs:mb-10 lg:mb-20">
+      <div className="xs:text-base lg:text-2xl text-lightGray font-medium text-center xs:mb-10 lg:mb-20">
         Jadilah bagian dari komunitas developer React dan React Native terbesar
         di Indonesia di ujung jarimu. <br />
         Temukan kami di platform social media favorit-mu!

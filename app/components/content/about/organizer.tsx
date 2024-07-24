@@ -4,7 +4,7 @@ import type { OrganizerType } from "~/types/about";
 
 export const AboutOrganizer = () => {
   return (
-    <section className="max-w-7xl w-full px-16 text-[#C7CBD1] flex flex-col gap-10 md:gap-12 md:text-3xl">
+    <section className="max-w-7xl w-full px-16 text-lightGray flex flex-col gap-10 md:gap-12 md:text-3xl">
       <h2 className="font-semibold text-2xl md:text-4xl text-white">
         Pengurus
       </h2>
@@ -35,7 +35,7 @@ const OrganizerCard = ({ fullName, image, role }: OrganizerType) => {
       </Avatar>
       <div className="flex flex-col gap-[2px] font-medium md:text-2xl">
         <h3>{fullName}</h3>
-        <p className="text-[#C7CBD1]/40">{role}</p>
+        <p className="text-lightGray/40">{role}</p>
       </div>
     </article>
   );

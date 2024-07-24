@@ -19,7 +19,7 @@ export function SiteNavigation() {
             <SheetTrigger>
               <AlignRight />
             </SheetTrigger>
-            <SheetContent side="right" className="bg-[#15181D] text-slate-50">
+            <SheetContent side="right" className="bg-x-black-900 text-slate-50">
               <ul className={`flex flex-col gap-4 text-slate-400`}>
                 {navigationItems.map((navItem) => (
                   <li key={navItem.path}>

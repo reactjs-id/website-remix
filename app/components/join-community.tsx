@@ -23,7 +23,7 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
       <div className="xs:text-xl lg:text-6xl font-semibold text-center xs:mb-5 lg:mb-10 xs:mt-16 lg:mt-32">
         Gabung reactjs.id
       </div>
-      <div className="xs:text-base lg:text-2xl text-[#C7CBD1] font-medium text-center xs:mb-10 lg:mb-20">
+      <div className="xs:text-base lg:text-2xl text-brand-gray-lavender font-medium text-center xs:mb-10 lg:mb-20">
         Jadilah bagian dari komunitas developer React dan React Native terbesar
         di Indonesia di ujung jarimu. <br />
         Temukan kami di platform social media favorit-mu!
@@ -85,7 +85,7 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
           </div>
         </div>
       )}
-      <div className="max-w-6xl mx-auto xs:pb-12 lg:pb-32 flex justify-center flex-col text-center font-medium text-lightGray sm:text-base lg:text-2xl">
+      <div className="max-w-6xl mx-auto xs:pb-12 lg:pb-32 flex justify-center flex-col text-center font-medium text-brand-gray-lavender sm:text-base lg:text-2xl">
         <div className="my-11 mt-24">Gabung di platform kami</div>
         <ul className="grid grid-cols-2 gap-5 xs:px-4 lg:px-24">
           {communityPlatforms.map((platform) => {
@@ -97,7 +97,7 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
                 className="rounded-2xl bg-darkJoinButton place-content-center xs:px-4 lg:px-5 xs:py-4 lg:py-6 border border-darkBorderJoinButton"
               >
                 <Link to={link} target="_blank" rel="noreferrer">
-                  <div className="flex gap-5 items-center xs:flex-col lg:flex-row color-lightGray">
+                  <div className="flex gap-5 items-center xs:flex-col lg:flex-row color-brand-gray-lavender">
                     <svg
                       key={icon.title}
                       role="img"

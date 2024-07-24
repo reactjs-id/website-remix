@@ -14,7 +14,13 @@ export default {
     },
     extend: {
       colors: {
-        lightGray: "#C7CBD1",
+        "brand-gray-lavender": "#C7CBD1",
+        "brand-gray-cool": "#8E96A5",
+        "brand-blue-berry": "#3E4F6B",
+        "brand-blue-steel": "#B1C8E7",
+        "brand-black-aswad": "#15181D",
+        "brand-black-washed": "#1B212A",
+        "brand-black-granite": "#2E3137",
         darkJoinButton: "#20242B",
         darkBorderJoinButton: "#2E3137",
         border: "hsl(var(--border))",

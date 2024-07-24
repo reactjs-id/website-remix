@@ -2,7 +2,7 @@ import { CalendarCheck2, Newspaper, Users } from "lucide-react";
 
 export const AboutGeneral = () => {
   return (
-    <section className="max-w-7xl w-full px-16 text-[#C7CBD1] flex flex-col gap-10 md:gap-12 md:text-3xl">
+    <section className="max-w-7xl w-full px-16 text-brand-gray-lavender flex flex-col gap-10 md:gap-12 md:text-3xl">
       <div className="flex flex-col gap-2">
         <h1 className="text-white font-bold text-4xl md:text-6xl">
           <img
@@ -29,7 +29,7 @@ export const AboutGeneral = () => {
           <p className="font-medium text-xl md:text-4xl text-white">100.000+</p>
           <p>Member telegram</p>
         </div>
-        <div className="md:w-[1px] h-[1px] w-full md:h-full bg-[#3E4F6B]" />
+        <div className="md:w-[1px] h-[1px] w-full md:h-full bg-brand-blue-berry" />
         <div className="flex flex-col gap-1">
           <CalendarCheck2 className="w-6 h-6 md:w-12 md:h-12 text-white" />
           <p className="font-medium text-xl md:text-4xl text-white">
@@ -37,7 +37,7 @@ export const AboutGeneral = () => {
           </p>
           <p>Acara diselenggarakan</p>
         </div>
-        <div className="md:w-[1px] h-[1px] w-full md:h-full bg-[#3E4F6B]" />
+        <div className="md:w-[1px] h-[1px] w-full md:h-full bg-brand-blue-berry" />
         <div className="flex flex-col gap-1">
           <Newspaper className="w-6 h-6 md:w-12 md:h-12 text-white" />
           <p className="font-medium text-xl md:text-4xl text-white">

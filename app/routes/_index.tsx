@@ -38,7 +38,7 @@ export default function IndexRoute() {
           React dan ekosistemnya
         </p>
       </section>
-      <section className="w-full overflow-x-scroll overflow-y-hidden xs:mb-20 lg:mb-32">
+      <section className="w-full overflow-x-scroll overflow-y-hidden xs:mb-20 lg:mb-32 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         <ul className="flex justify-between xs:gap-2 lg:gap-8 -mx-20">
           {heroPhotos.map((photo, index) => (
             <li

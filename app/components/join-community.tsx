@@ -29,7 +29,7 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
         Temukan kami di platform social media favorit-mu!
       </div>
       {isImageSlide ? (
-        <div className="w-full overflow-x-scroll overflow-y-hidden">
+        <div className="w-full overflow-x-scroll overflow-y-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <ul className="flex justify-between xs:gap-2 lg:gap-8 -mx-20">
             {heroPhotos.map((photo, index) => (
               <li

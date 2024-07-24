@@ -3,10 +3,10 @@ import { missionData } from "~/data/about";
 export const AboutMission = () => {
   return (
     <section className="max-w-7xl w-full px-16 text-brand-gray-lavender flex flex-col gap-10 md:gap-12 md:text-3xl">
-      <h2 className="font-semibold text-2xl md:text-4xl text-white">
+      <h2 className="font-semibold text-2xl md:text-4xl text-white leading-normal lg:leading-11">
         Misi Kami
       </h2>
-      <ol className="flex flex-col gap-10 md:gap-12">
+      <ol className="flex flex-col gap-10 md:gap-12 leading-normal lg:leading-10">
         {missionData.map(({ title, description }, index) => (
           <li
             key={title + index}

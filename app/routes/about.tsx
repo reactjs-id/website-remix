@@ -9,7 +9,7 @@ import { Line } from "~/components/line";
 
 export default function AboutRoute() {
   return (
-    <div className="flex items-center flex-col py-14 gap-16">
+    <div className="flex items-center flex-col py-4 lg:py-14 gap-16">
       <AboutGeneral />
       <AboutOrganizer />
       <Line />

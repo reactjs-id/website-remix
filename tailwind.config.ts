@@ -79,6 +79,9 @@ export default {
       screens: {
         xs: "360px",
       },
+      lineHeight: {
+        11: "56px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -2,8 +2,8 @@ import { CalendarCheck2, Newspaper, Users } from "lucide-react";
 
 export const AboutGeneral = () => {
   return (
-    <section className="max-w-7xl w-full px-16 text-brand-gray-lavender flex flex-col gap-10 lg:gap-16 lg:text-3xl mt-10 lg:mt-28">
-      <div className="flex flex-col gap-9">
+    <section className="max-w-7xl w-full px-4 lg:px-16 text-brand-gray-lavender flex flex-col gap-10 lg:gap-16 lg:text-3xl mt-10 lg:mt-28">
+      <div className="flex flex-col gap-2">
         <img
           src="/images/logos/reactjsid.svg"
           alt="React JS ID"

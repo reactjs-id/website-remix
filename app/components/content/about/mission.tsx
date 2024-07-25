@@ -2,7 +2,7 @@ import { missionData } from "~/data/about";
 
 export const AboutMission = () => {
   return (
-    <section className="max-w-7xl w-full px-16 text-brand-gray-lavender flex flex-col gap-10 md:gap-12 md:text-3xl">
+    <section className="max-w-7xl w-full px-4 lg:px-16 text-brand-gray-lavender flex flex-col gap-10 md:gap-12 md:text-3xl">
       <h2 className="font-semibold text-2xl md:text-4xl text-white leading-normal lg:leading-11">
         Misi Kami
       </h2>

@@ -28,6 +28,7 @@
     "dayjs": "^1.11.12",
     "isbot": "^4.1.0",
     "lucide-react": "^0.403.0",
+    "prisma": "^5.17.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "simple-icons": "^13.1.0",

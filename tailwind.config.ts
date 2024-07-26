@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   darkMode: ["class"],
@@ -13,6 +14,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['"Geist Sans"', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         "brand-gray-lavender": "#C7CBD1",
         "brand-gray-cool": "#8E96A5",

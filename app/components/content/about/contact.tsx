@@ -1,17 +1,21 @@
+import { Link } from "@remix-run/react";
+
 export const AboutContact = () => {
   return (
-    <section className="max-w-7xl w-full px-16 text-brand-gray-lavender flex flex-col gap-10 md:gap-12 md:text-3xl">
-      <h2 className="font-semibold text-2xl md:text-4xl text-white">
+    <section className="max-w-7xl w-full px-4 lg:px-16 text-brand-gray-lavender flex flex-col gap-10 lg:gap-12 lg:text-3xl">
+      <h2 className="font-semibold text-2xl lg:text-4xl text-white">
         Kontak Kami
       </h2>
-      <p className="md:text-2xl">
+      <p className="lg:text-2xl">
         Untuk informasi lebih lanjut atau pertanyaan, jangan ragu untuk
-        menghubungi kami melalui email di{" "}
-        <strong className="font-bold">contact@reactjs.id</strong> atau melalui
-        platform sosial media kami.
+        menghubungi kami melalui email di
+        <Link to="mailto:contact@reactjs.id">
+          <span className="font-medium underline mx-2">contact@reactjs.id</span>
+        </Link>
+        atau melalui platform sosial media kami.
       </p>
-      <p className="font-semibold text-2xl md:text-4xl text-white text-center">
-        <strong>contact@reactjs.id</strong>
+      <p className="font-medium text-2xl lg:text-4xl text-white text-center">
+        <Link to="mailto:contact@reactjs.id">contact@reactjs.id</Link>
       </p>
     </section>
   );

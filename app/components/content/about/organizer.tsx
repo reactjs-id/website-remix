@@ -4,11 +4,11 @@ import type { OrganizerType } from "~/types/about";
 
 export const AboutOrganizer = () => {
   return (
-    <section className="max-w-7xl w-full px-16 text-brand-gray-lavender flex flex-col gap-10 md:gap-12 md:text-3xl">
-      <h2 className="font-semibold text-2xl md:text-4xl text-white">
+    <section className="max-w-7xl w-full px-4 lg:px-16 text-brand-gray-lavender flex flex-col gap-10 md:gap-12 md:text-3xl">
+      <h2 className="font-semibold text-2xl md:text-4xl text-white leading-normal lg:leading-11">
         Pengurus
       </h2>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 leading-normal lg:leading-10">
         {organizerData.map(({ fullName, role, image }, index) => (
           <li key={fullName + index}>
             <OrganizerCard
@@ -29,7 +29,7 @@ export const AboutOrganizer = () => {
 const OrganizerCard = ({ fullName, image, role }: OrganizerType) => {
   return (
     <article className="flex flex-row items-center gap-4">
-      <Avatar className="w-16 h-16">
+      <Avatar className="size-12 lg:size-16">
         <AvatarImage src={image} alt={`${fullName}'s profile`} />
         <AvatarFallback>{fullName[0].toUpperCase()}</AvatarFallback>
       </Avatar>

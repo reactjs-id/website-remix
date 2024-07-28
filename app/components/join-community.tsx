@@ -94,7 +94,7 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
             return (
               <li
                 key={link}
-                className="rounded-2xl bg-darkJoinButton place-content-center xs:px-4 lg:px-5 xs:py-4 lg:py-6 border border-darkBorderJoinButton"
+                className="rounded-2xl bg-brand-black-mamba place-content-center xs:px-4 lg:px-5 xs:py-4 lg:py-6 border border-brand-black-granite"
               >
                 <Link to={link} target="_blank" rel="noreferrer">
                   <div className="flex gap-5 items-center xs:flex-col lg:flex-row color-brand-gray-lavender">

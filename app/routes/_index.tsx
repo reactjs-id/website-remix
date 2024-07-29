@@ -9,11 +9,29 @@ import { JoinCommunity } from "~/components/join-community";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "ReactJS Indonesia" },
+    { title: "ReactJS Indonesia - Community of React Developers" },
+    {
+      property: "og:title",
+      content: "ReactJS Indonesia - Community of React Developers",
+    },
     {
       name: "description",
       content:
-        "Komunitas developer React dan React Native terbesar di Indonesia",
+        "Join ReactJS Indonesia, a vibrant community of developers passionate about learning and sharing their knowledge on React. Find resources, tutorials, events, and connect with fellow React enthusiasts.",
+    },
+    {
+      name: "keywords",
+      content:
+        "ReactJS, Indonesia, React community, JavaScript, web development, programming tutorials, React events, React resources",
+    },
+    {
+      property: "og:description",
+      content:
+        "ReactJS Indonesia is a thriving community where developers can share their knowledge, find resources, and participate in events focused on React development.",
+    },
+    {
+      property: "og:type",
+      content: "website",
     },
   ];
 };

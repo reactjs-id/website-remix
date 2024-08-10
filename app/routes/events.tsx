@@ -1,4 +1,5 @@
 import { MetaFunction } from "@remix-run/node";
+import { EventGeneral } from "~/components/content/events/general";
 
 export const meta: MetaFunction = () => {
   return [
@@ -35,8 +36,8 @@ export const meta: MetaFunction = () => {
 
 export default function EventsRoute() {
   return (
-    <div>
-      <h1>Events</h1>
+    <div className="flex items-center flex-col py-14 gap-16 md:gap-20 lg:gap-28">
+      <EventGeneral />
     </div>
   );
 }

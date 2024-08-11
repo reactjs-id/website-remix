@@ -3,6 +3,7 @@ import { MoveRight } from "lucide-react";
 import { Spacer } from "~/components/ui/spacer";
 import { EventItem, fakerEvents } from "~/components/shared/event-item";
 import { Button } from "~/components/ui/button";
+import { Link } from "@remix-run/react";
 
 export function Networking() {
   return (
@@ -195,9 +196,14 @@ export function Networking() {
 
         <Spacer size="xs" />
 
-        <Button className="bg-brand-black-washed border border-brand-black-granite justify-start text-center px-4 lg:px-9 py-6 lg:!py-[28px] rounded-2xl">
-          <span className="text-base lg:text-xl">Lihat semua acara</span>
-          <MoveRight className="ml-2" />
+        <Button
+          asChild
+          className="bg-brand-black-washed border border-brand-black-granite justify-start text-center px-4 lg:px-9 py-6 lg:!py-[28px] rounded-2xl"
+        >
+          <Link to="/events">
+            <span className="text-base lg:text-xl">Lihat semua acara</span>
+            <MoveRight className="ml-2" />
+          </Link>
         </Button>
       </div>
     </section>

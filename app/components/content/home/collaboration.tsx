@@ -1,4 +1,3 @@
-import { Link } from "@remix-run/react";
 import { MoveRight } from "lucide-react";
 
 import { Button } from "~/components/ui/button";
@@ -35,12 +34,15 @@ export function Collaboration() {
         </p>
       </div>
 
-      <Link to="https://t.me/react_idn" target="_blank" rel="noreferrer">
-        <Button className="bg-brand-black-washed border border-brand-black-granite justify-start text-center xs:px-4 xl:px-9 !py-[28px] rounded-2xl">
+      <Button
+        asChild
+        className="bg-brand-black-washed border border-brand-black-granite justify-start text-center xs:px-4 xl:px-9 !py-[28px] rounded-2xl"
+      >
+        <a href="https://t.me/react_idn" target="_blank" rel="noreferrer">
           <span className="xs:text-base lg:text-xl">Lihat grup Telegram</span>
           <MoveRight className="ml-2" />
-        </Button>
-      </Link>
+        </a>
+      </Button>
     </>
   );
 }

@@ -1,14 +1,8 @@
-import { Link } from "@remix-run/react";
-
 import { GridPhotos } from "~/components/shared/grid-photos";
 import { JoinCard } from "~/components/shared/join-card";
 import { communityPlatforms } from "~/data/community-platforms";
 import { heroPhotos } from "~/data/hero-photos";
 import { cn } from "~/utils/cn";
-
-interface JoinCommunityPropsType {
-  isImageSlide?: boolean;
-}
 
 const joinCommunityPhotos = Array.from({ length: 12 }).map((_, index) => ({
   slug: `hero-photo-${index}`,
@@ -18,7 +12,7 @@ const joinCommunityPhotos = Array.from({ length: 12 }).map((_, index) => ({
 
 const cssContainer = "flex gap-4 xs:flex-col lg:flex-row xs:mx-1 lg:-mx-12";
 
-export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
+export function JoinCommunity({ isImageSlide }: { isImageSlide?: boolean }) {
   return (
     <>
       <div className="flex flex-col items-center justify-center text-center">
@@ -98,9 +92,9 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
                 key={url}
                 className="rounded-2xl bg-brand-black-mamba place-content-center xs:px-4 lg:px-5 xs:py-4 lg:py-6 border border-brand-black-granite"
               >
-                <Link to={url} target="_blank" rel="noreferrer">
+                <a href={url} target="_blank" rel="noreferrer">
                   <JoinCard icon={icon} text={text} iconSize={iconSize} />
-                </Link>
+                </a>
               </li>
             );
           })}

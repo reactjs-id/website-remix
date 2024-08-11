@@ -1,7 +1,7 @@
 import { MoveRight } from "lucide-react";
 
-import { Spacer } from "~/components/spacer";
-import { EventItem, fakerEvents } from "~/components/event-item";
+import { Spacer } from "~/components/ui/spacer";
+import { EventItem, fakerEvents } from "~/components/shared/event-item";
 import { Button } from "~/components/ui/button";
 
 export function Networking() {
@@ -19,7 +19,7 @@ export function Networking() {
               </span>
               <img
                 className="mb-1"
-                src="/images/logos/reactjsid.svg"
+                src="/images/reactjsid.svg"
                 alt="reactjs.id logo"
                 style={{ width: 44, height: 23 }}
               />

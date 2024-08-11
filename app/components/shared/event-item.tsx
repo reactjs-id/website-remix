@@ -7,7 +7,12 @@ type EventItemProps = {
   imgUrl: string;
 };
 
-function EventItem({ title, date, description, imgUrl }: EventItemProps) {
+export function EventItem({
+  title,
+  date,
+  description,
+  imgUrl,
+}: EventItemProps) {
   return (
     <div className="flex items-center gap-1 lg:gap-10 flex-col lg:flex-row">
       <img
@@ -33,7 +38,7 @@ function EventItem({ title, date, description, imgUrl }: EventItemProps) {
   );
 }
 
-const fakerEvents = [
+export const fakerEvents = [
   {
     title: "Meetup IRL #24",
     date: "Kamis depan - pkl 2.00 siang",
@@ -56,5 +61,3 @@ const fakerEvents = [
     imgUrl: "https://picsum.photos/seed/picsum/340/190",
   },
 ];
-
-export { EventItem, fakerEvents };

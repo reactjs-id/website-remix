@@ -1,12 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
 
-import { Collaboration } from "~/components/collaboration";
-import { heroPhotos } from "~/data/hero-photos";
-import { Spacer } from "~/components/spacer";
-import { Networking } from "~/components/home/networking";
-import { JoinCommunity } from "~/components/join-community";
-import iconRocket from "~/assets/icon-rocket.svg";
 import { cn } from "~/utils/cn";
+import { Collaboration } from "~/components/content/home/collaboration";
+import { heroPhotos } from "~/data/hero-photos";
+import { JoinCommunity } from "~/components/shared/join-community";
+import { Networking } from "~/components/content/home/networking";
+import { Spacer } from "~/components/ui/spacer";
 
 export const meta: MetaFunction = () => {
   return [
@@ -42,7 +41,7 @@ export default function IndexRoute() {
     <>
       <section className="xs:pb-12 xs:pt-14 lg:pb-24 lg:pt-28 flex flex-col items-center gap-8">
         <img
-          src="/images/logos/reactjsid.svg"
+          src="/images/reactjsid.svg"
           alt="ReactJS Indonesia Logo"
           width={107}
           height={55}
@@ -91,7 +90,7 @@ export default function IndexRoute() {
       </section>
 
       <img
-        src={iconRocket}
+        src="/images/icon-rocket.svg"
         alt="icon rocket"
         className="mx-auto size-28 lg:size-52 my-20 lg:my-52"
       />

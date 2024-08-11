@@ -7,7 +7,7 @@ const spacerSizes = {
   // lg: "h-56 lg:h-64",
 };
 
-function Spacer({
+export function Spacer({
   size = "base",
   className = "",
 }: {
@@ -16,5 +16,3 @@ function Spacer({
 }) {
   return <div className={`${className} ${spacerSizes[size]}`} />;
 }
-
-export { Spacer };

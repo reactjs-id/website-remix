@@ -1,8 +1,7 @@
-import { MoveRight } from "lucide-react";
 import { Link } from "@remix-run/react";
+import { MoveRight } from "lucide-react";
 
-import indonesiaMap from "~/assets/map.png";
-import { Button } from "./ui/button";
+import { Button } from "~/components/ui/button";
 
 export function Collaboration() {
   return (
@@ -16,7 +15,7 @@ export function Collaboration() {
         </span>
         <img
           className="w-[70px] h-[40px]"
-          src="/images/logos/reactjsid.svg"
+          src="/images/reactjsid.svg"
           alt="ReactJS Indonesia Logo"
         />
       </div>
@@ -25,7 +24,7 @@ export function Collaboration() {
         developer. Berbagi wawasan dan pengetahuan mengenai ekosistem React.
       </div>
 
-      <img src={indonesiaMap} alt="Peta Indonesia" className="size-full" />
+      <img src="/images/map.png" alt="Peta Indonesia" className="size-full" />
 
       <div className="my-10">
         <h4 className="font-medium xs:text-lg lg:text-4xl text-brand-gray-lavender">

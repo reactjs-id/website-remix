@@ -1,13 +1,14 @@
 import { siFacebook, siGithub, siTelegram, siX } from "simple-icons";
-import { Navigation } from "./navigation";
+
+import { Navigation } from "~/components/shared/navigation";
 
 export function SiteFooter() {
   return (
     <footer className="container flex-col mx-auto gap-14 mt-12 lg:mt-32 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
       <div className="flex items-center justify-between flex-col lg:flex-row">
         <img
-          className="w-[67.44px] h-[31.57px]"
-          src="/images/logos/reactjsid.svg"
+          className="w-[70px] h-[40px]"
+          src="/images/reactjsid.svg"
           alt="reactjsid-logo"
         />
 

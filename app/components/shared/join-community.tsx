@@ -21,15 +21,17 @@ const cssContainer = "flex gap-4 xs:flex-col lg:flex-row xs:mx-1 lg:-mx-12";
 export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
   return (
     <>
-      <h3 className="xs:text-xl lg:text-6xl font-semibold text-center xs:mb-5 lg:mb-10 xs:mt-16 lg:mt-32">
-        Bergabung ke ReactJS Indonesia
-      </h3>
+      <div className="flex flex-col items-center justify-center text-center">
+        <h3 className="xs:text-xl lg:text-6xl font-semibold xs:mb-5 lg:mb-10 xs:mt-16 lg:mt-32">
+          Bergabung ke ReactJS Indonesia
+        </h3>
 
-      <p className="xs:text-base lg:text-2xl text-brand-gray-lavender font-medium text-center xs:mb-10 lg:mb-20">
-        Jadilah bagian dari komunitas developer React dan React Native terbesar
-        di Indonesia di ujung jarimu. Temukan kami di platform social media
-        favoritmu!
-      </p>
+        <p className="max-w-4xl xs:text-base lg:text-2xl text-brand-gray-lavender font-medium xs:mb-10 lg:mb-20">
+          Jadilah bagian dari komunitas developer React dan React Native
+          terbesar di Indonesia di ujung jarimu. Temukan kami di platform social
+          media favoritmu!
+        </p>
+      </div>
 
       {isImageSlide ? (
         <div className="w-full overflow-x-scroll overflow-y-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">

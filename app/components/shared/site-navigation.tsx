@@ -2,8 +2,8 @@ import { Link } from "@remix-run/react";
 import { AlignRight } from "lucide-react";
 
 import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
-import { Navigation, navigationItems } from "./navigation";
-import { BackgroundGradient } from "../background-gradient";
+import { Navigation, navigationItems } from "~/components/shared/navigation";
+import { BackgroundGradient } from "~/components/shared/background-gradient";
 
 export function SiteNavigation() {
   return (
@@ -13,7 +13,7 @@ export function SiteNavigation() {
       <nav className="container !p-4 !lg:p-8 items-center">
         <Link to="/" className="text-xl font-bold">
           <img
-            src="/images/logos/reactjsid.svg"
+            src="/images/reactjsid.svg"
             alt="ReactJS Indonesia Logo"
             className="w-16 h-9 object-contain object-left"
           />

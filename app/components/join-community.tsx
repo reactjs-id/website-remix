@@ -1,9 +1,10 @@
-import clsx from "clsx";
 import { Link } from "@remix-run/react";
 
 import { GridPhotos } from "~/components/shared/grid-photos";
+import { JoinCard } from "~/components/shared/join-card";
 import { communityPlatforms } from "~/data/community-platforms";
 import { heroPhotos } from "~/data/hero-photos";
+import { cn } from "~/utils/cn";
 
 interface JoinCommunityPropsType {
   isImageSlide?: boolean;
@@ -58,18 +59,18 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
             <GridPhotos type="2x2" photos={joinCommunityPhotos.slice(9, 12)} />
           </div>
           <div className="relative">
-            <div className={clsx(cssContainer, "mt-4")}>
+            <div className={cn(cssContainer, "mt-4")}>
               {joinCommunityPhotos.slice(0, 7).map((photo, index) => (
                 <div
                   key={photo.text}
-                  className={clsx(
+                  className={cn(
                     "aspect-square max-h-36",
                     index % 3 === 0 ? "basis-1/4" : "basis-1/2",
                   )}
                 >
                   <img
                     src={photo.url}
-                    alt=""
+                    alt={photo.text}
                     className="rounded-2xl w-full h-full object-cover"
                   />
                 </div>
@@ -89,29 +90,16 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
         <div className="my-11 mt-24">Gabung di platform kami</div>
         <ul className="grid grid-cols-2 gap-5 xs:px-4 lg:px-24">
           {communityPlatforms.map((platform) => {
-            const { link, icon, text } = platform;
+            const { url, icon, text } = platform;
             const iconSize = platform.icon.title == "X" ? 37 : 44;
+
             return (
               <li
-                key={link}
+                key={url}
                 className="rounded-2xl bg-brand-black-mamba place-content-center xs:px-4 lg:px-5 xs:py-4 lg:py-6 border border-brand-black-granite"
               >
-                <Link to={link} target="_blank" rel="noreferrer">
-                  <div className="flex gap-5 items-center xs:flex-col lg:flex-row color-brand-gray-lavender">
-                    <svg
-                      key={icon.title}
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="white"
-                      width={iconSize}
-                      height={iconSize}
-                    >
-                      <title>{icon.title}</title>
-                      <path d={icon.path} />
-                    </svg>
-                    {text}
-                  </div>
+                <Link to={url} target="_blank" rel="noreferrer">
+                  <JoinCard icon={icon} text={text} iconSize={iconSize} />
                 </Link>
               </li>
             );

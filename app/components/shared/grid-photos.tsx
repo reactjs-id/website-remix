@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "~/utils/cn";
 
 interface Props {
   type: "3x2" | "2x2";
@@ -17,7 +17,7 @@ const cssParent = {
 
 export function GridPhotos({ type, photos }: Props) {
   return (
-    <div className={clsx("w-full grid gap-4 grid-rows-2", cssParent[type])}>
+    <div className={cn("w-full grid gap-4 grid-rows-2", cssParent[type])}>
       {photos.map((photo, index) => {
         let cssHeight = "";
 
@@ -28,7 +28,7 @@ export function GridPhotos({ type, photos }: Props) {
         return (
           <div
             key={photo.text}
-            className={clsx(index === 0 ? cssChild[type] : "", cssHeight)}
+            className={cn(index === 0 ? cssChild[type] : "", cssHeight)}
           >
             <img
               src={photo.url}

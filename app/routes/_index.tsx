@@ -1,5 +1,4 @@
 import type { MetaFunction } from "@remix-run/node";
-import clsx from "clsx";
 
 import { Collaboration } from "~/components/collaboration";
 import { heroPhotos } from "~/data/hero-photos";
@@ -7,6 +6,7 @@ import { Spacer } from "~/components/spacer";
 import { Networking } from "~/components/home/networking";
 import { JoinCommunity } from "~/components/join-community";
 import iconRocket from "~/assets/icon-rocket.svg";
+import { cn } from "~/utils/cn";
 
 export const meta: MetaFunction = () => {
   return [
@@ -62,7 +62,7 @@ export default function IndexRoute() {
           {heroPhotos.map((photo, index) => (
             <li
               key={photo.slug}
-              className={clsx(
+              className={cn(
                 "h-auto py-3",
                 index % 2 === 0 ? "-rotate-3" : "rotate-3",
               )}

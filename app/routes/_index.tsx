@@ -1,11 +1,12 @@
 import type { MetaFunction } from "@remix-run/node";
+import clsx from "clsx";
 
-import Collaboration from "~/components/collaboration";
-import iconRocket from "~/assets/icon-rocket.svg";
-import heroPhotos from "~/data/hero-photos";
+import { Collaboration } from "~/components/collaboration";
+import { heroPhotos } from "~/data/hero-photos";
 import { Spacer } from "~/components/spacer";
-import Networking from "~/components/home/networking";
+import { Networking } from "~/components/home/networking";
 import { JoinCommunity } from "~/components/join-community";
+import iconRocket from "~/assets/icon-rocket.svg";
 
 export const meta: MetaFunction = () => {
   return [
@@ -42,7 +43,7 @@ export default function IndexRoute() {
       <section className="xs:pb-12 xs:pt-14 lg:pb-24 lg:pt-28 flex flex-col items-center gap-8">
         <img
           src="./images/logos/reactjsid.svg"
-          alt=""
+          alt="ReactJS Indonesia Logo"
           style={{ width: 107, height: 55 }}
         />
         <h1 className="xs:text-4xl lg:text-8xl font-bold text-center text-balance">
@@ -61,9 +62,10 @@ export default function IndexRoute() {
           {heroPhotos.map((photo, index) => (
             <li
               key={photo.slug}
-              className={`h-auto py-3 ${
-                index % 2 === 0 ? "-rotate-3" : "rotate-3"
-              }`}
+              className={clsx(
+                "h-auto py-3",
+                index % 2 === 0 ? "-rotate-3" : "rotate-3",
+              )}
             >
               <img
                 src={photo.url}

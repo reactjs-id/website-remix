@@ -4,7 +4,7 @@ import { Link } from "@remix-run/react";
 import indonesiaMap from "~/assets/map.png";
 import { Button } from "./ui/button";
 
-export default function Collaboration() {
+export function Collaboration() {
   return (
     <>
       <div className="flex gap-2 justify-center items-end mb-10">

@@ -1,4 +1,4 @@
-const heroPhotos = [
+export const heroPhotos = [
   {
     slug: "hero-photo-1",
     text: "Photo 1",
@@ -25,5 +25,3 @@ const heroPhotos = [
     url: "https://placehold.co/398x268",
   },
 ];
-
-export default heroPhotos;

@@ -3,12 +3,13 @@ import { AlignRight } from "lucide-react";
 
 import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
 import { Navigation, navigationItems } from "./navigation";
-import BackgroundGradient from "../background-gradient";
+import { BackgroundGradient } from "../background-gradient";
 
 export function SiteNavigation() {
   return (
     <div className="flex justify-center items-center">
       <BackgroundGradient />
+
       <nav className="container !p-4 !lg:p-8 items-center">
         <Link to="/" className="text-xl font-bold">
           ReactJS ID

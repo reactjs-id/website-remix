@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { Link } from "@remix-run/react";
 
-import Grid from "./Grid";
-import communityPlatforms from "~/data/community-platforms";
-import heroPhotos from "~/data/hero-photos";
+import { GridPhotos } from "~/components/shared/grid-photos";
+import { communityPlatforms } from "~/data/community-platforms";
+import { heroPhotos } from "~/data/hero-photos";
 
 interface JoinCommunityPropsType {
   isImageSlide?: boolean;
@@ -52,10 +52,10 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
       ) : (
         <div className="w-full overflow-x-hidden">
           <div className={cssContainer}>
-            <Grid type="3x2" photos={joinCommunityPhotos.slice(0, 3)} />
-            <Grid type="2x2" photos={joinCommunityPhotos.slice(3, 6)} />
-            <Grid type="3x2" photos={joinCommunityPhotos.slice(6, 9)} />
-            <Grid type="2x2" photos={joinCommunityPhotos.slice(9, 12)} />
+            <GridPhotos type="3x2" photos={joinCommunityPhotos.slice(0, 3)} />
+            <GridPhotos type="2x2" photos={joinCommunityPhotos.slice(3, 6)} />
+            <GridPhotos type="3x2" photos={joinCommunityPhotos.slice(6, 9)} />
+            <GridPhotos type="2x2" photos={joinCommunityPhotos.slice(9, 12)} />
           </div>
           <div className="relative">
             <div className={clsx(cssContainer, "mt-4")}>

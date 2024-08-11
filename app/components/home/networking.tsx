@@ -1,9 +1,10 @@
-import { Spacer } from "~/components/spacer";
 import { MoveRight } from "lucide-react";
+
+import { Spacer } from "~/components/spacer";
 import { EventItem, fakerEvents } from "~/components/event-item";
 import { Button } from "~/components/ui/button";
 
-export default function Networking() {
+export function Networking() {
   return (
     <section className="container !p-4 !lg:p-8">
       <div className="flex items-start flex-col grow">

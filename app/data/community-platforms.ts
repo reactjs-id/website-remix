@@ -1,6 +1,6 @@
 import { siFacebook, siMeetup, siTelegram, siX } from "simple-icons";
 
-const communityPlatforms = [
+export const communityPlatforms = [
   {
     link: "https://t.me/react_idn",
     text: "Masuk ke Channel Telegram",
@@ -22,5 +22,3 @@ const communityPlatforms = [
     icon: siX,
   },
 ];
-
-export default communityPlatforms;

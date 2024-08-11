@@ -19,7 +19,7 @@ export function Networking() {
               </span>
               <img
                 className="mb-1"
-                src="./images/logos/reactjsid.svg"
+                src="/images/logos/reactjsid.svg"
                 alt="reactjs.id logo"
                 style={{ width: 44, height: 23 }}
               />

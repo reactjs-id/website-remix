@@ -15,22 +15,22 @@ type CommunityPlatform = {
 export const communityPlatforms: CommunityPlatform[] = [
   {
     url: "https://t.me/react_idn",
-    text: "Masuk ke Channel Telegram",
+    text: "Masuk ke grup Telegram",
     icon: siTelegram,
   },
   {
     url: "https://meetup.com/reactindonesia",
-    text: "Masuk ke Grup Meetup",
+    text: "Masuk ke Meetup.com",
     icon: siMeetup,
   },
   {
     url: "https://facebook.com/groups/442974152553174",
-    text: "Masuk ke Grup Facebook",
+    text: "Masuk ke grup Facebook",
     icon: siFacebook,
   },
   {
     url: "https://x.com/reactjsid",
-    text: "Follow di Twitter",
+    text: "Follow di X (Twitter)",
     icon: siX,
   },
 ];

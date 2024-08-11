@@ -80,6 +80,8 @@
   }
 }
 
-.container {
-  @apply flex justify-between p-10 w-full max-w-7xl;
+@layer utilities {
+  .container {
+    @apply flex justify-between p-10 w-full max-w-7xl;
+  }
 }

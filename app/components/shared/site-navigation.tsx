@@ -12,11 +12,17 @@ export function SiteNavigation() {
 
       <nav className="container !p-4 !lg:p-8 items-center">
         <Link to="/" className="text-xl font-bold">
-          ReactJS ID
+          <img
+            src="/images/logos/reactjsid.svg"
+            alt="ReactJS Indonesia Logo"
+            className="w-16 h-9 object-contain object-left"
+          />
         </Link>
+
         <div className="hidden lg:block">
           <Navigation className="gap-[75px]" />
         </div>
+
         <div className="block lg:hidden">
           <Sheet>
             <SheetTrigger>

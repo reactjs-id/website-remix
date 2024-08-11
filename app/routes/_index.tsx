@@ -42,19 +42,22 @@ export default function IndexRoute() {
     <>
       <section className="xs:pb-12 xs:pt-14 lg:pb-24 lg:pt-28 flex flex-col items-center gap-8">
         <img
-          src="./images/logos/reactjsid.svg"
+          src="/images/logos/reactjsid.svg"
           alt="ReactJS Indonesia Logo"
-          style={{ width: 107, height: 55 }}
+          width={107}
+          height={55}
         />
+
         <h1 className="xs:text-4xl lg:text-8xl font-bold text-center text-balance">
           <span>Komunitas Developer</span>
           <br />
           <span>ReactJS Indonesia</span>
         </h1>
+
         <p className="xs:text-sm sm:text-2xl text-slate-400 text-center text-balance max-w-6xl">
-          Bergabunglah dengan Komunitas Developer React dan React Native
-          Indonesia! Hadiri Meetup Bulanan dan dapatkan wawasan terbaru tentang
-          React dan ekosistemnya
+          Bergabunglah dengan komunitas developer React dan React Native
+          Indonesia! Ikuti diskusi dan hadiri Meetup bulanan. Dapatkan wawasan
+          terbaru tentang React dan ekosistemnya
         </p>
       </section>
       <section className="w-full overflow-x-scroll overflow-y-hidden xs:mb-20 lg:mb-32 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">

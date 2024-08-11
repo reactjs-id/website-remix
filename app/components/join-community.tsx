@@ -21,14 +21,16 @@ const cssContainer = "flex gap-4 xs:flex-col lg:flex-row xs:mx-1 lg:-mx-12";
 export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
   return (
     <>
-      <div className="xs:text-xl lg:text-6xl font-semibold text-center xs:mb-5 lg:mb-10 xs:mt-16 lg:mt-32">
-        Gabung reactjs.id
-      </div>
-      <div className="xs:text-base lg:text-2xl text-brand-gray-lavender font-medium text-center xs:mb-10 lg:mb-20">
+      <h3 className="xs:text-xl lg:text-6xl font-semibold text-center xs:mb-5 lg:mb-10 xs:mt-16 lg:mt-32">
+        Bergabung ke ReactJS Indonesia
+      </h3>
+
+      <p className="xs:text-base lg:text-2xl text-brand-gray-lavender font-medium text-center xs:mb-10 lg:mb-20">
         Jadilah bagian dari komunitas developer React dan React Native terbesar
-        di Indonesia di ujung jarimu. <br />
-        Temukan kami di platform social media favorit-mu!
-      </div>
+        di Indonesia di ujung jarimu. Temukan kami di platform social media
+        favoritmu!
+      </p>
+
       {isImageSlide ? (
         <div className="w-full overflow-x-scroll overflow-y-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <ul className="flex justify-between xs:gap-2 lg:gap-8 -mx-20">
@@ -51,13 +53,14 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
           </ul>
         </div>
       ) : (
-        <div className="w-full overflow-x-hidden">
+        <div className="w-full overflow-x-hidden px-4">
           <div className={cssContainer}>
             <GridPhotos type="3x2" photos={joinCommunityPhotos.slice(0, 3)} />
             <GridPhotos type="2x2" photos={joinCommunityPhotos.slice(3, 6)} />
             <GridPhotos type="3x2" photos={joinCommunityPhotos.slice(6, 9)} />
             <GridPhotos type="2x2" photos={joinCommunityPhotos.slice(9, 12)} />
           </div>
+
           <div className="relative">
             <div className={cn(cssContainer, "mt-4")}>
               {joinCommunityPhotos.slice(0, 7).map((photo, index) => (
@@ -76,18 +79,13 @@ export function JoinCommunity({ isImageSlide }: JoinCommunityPropsType) {
                 </div>
               ))}
             </div>
-            <div
-              className="w-full h-10 absolute bottom-0"
-              style={{
-                background:
-                  "linear-gradient(180deg, transparent 0%, #15181D 100%)",
-              }}
-            ></div>
           </div>
         </div>
       )}
+
       <div className="max-w-6xl mx-auto xs:pb-12 lg:pb-32 flex justify-center flex-col text-center font-medium text-brand-gray-lavender sm:text-base lg:text-2xl">
-        <div className="my-11 mt-24">Gabung di platform kami</div>
+        <h4 className="my-11 mt-24">Bergabung dan ikuti kami</h4>
+
         <ul className="grid grid-cols-2 gap-5 xs:px-4 lg:px-24">
           {communityPlatforms.map((platform) => {
             const { url, icon, text } = platform;

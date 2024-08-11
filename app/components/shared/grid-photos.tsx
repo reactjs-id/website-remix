@@ -1,10 +1,5 @@
 import { cn } from "~/utils/cn";
 
-interface Props {
-  type: "3x2" | "2x2";
-  photos: Array<{ slug: string; text: string; url: string }>;
-}
-
 const cssChild = {
   "3x2": "row-span-2 col-span-2",
   "2x2": "col-span-2",
@@ -15,7 +10,13 @@ const cssParent = {
   "2x2": "grid-rows-2 grid-cols-2",
 };
 
-export function GridPhotos({ type, photos }: Props) {
+export function GridPhotos({
+  type,
+  photos,
+}: {
+  type: "3x2" | "2x2";
+  photos: Array<{ slug: string; text: string; url: string }>;
+}) {
   return (
     <div className={cn("w-full grid gap-4 grid-rows-2", cssParent[type])}>
       {photos.map((photo, index) => {

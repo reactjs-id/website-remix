@@ -1,6 +1,20 @@
-import type { MissionType, OfferType, OrganizerType } from "~/types/about";
+export type Organizer = {
+  image: string;
+  fullName: string;
+  role: string;
+};
 
-export const organizerData: OrganizerType[] = [
+export type Mission = {
+  title: string;
+  description: string;
+};
+
+export type Offer = {
+  title: string;
+  description: string;
+};
+
+export const organizerData: Organizer[] = [
   {
     fullName: "Dzaki",
     role: "kontributor open source",
@@ -48,7 +62,7 @@ export const organizerData: OrganizerType[] = [
   },
 ];
 
-export const missionData: MissionType[] = [
+export const missionData: Mission[] = [
   {
     title: "Membangun Komunitas yang Kuat",
     description:
@@ -66,7 +80,7 @@ export const missionData: MissionType[] = [
   },
 ];
 
-export const offerData: OfferType[] = [
+export const offerData: Offer[] = [
   {
     title: "Meetup Bulanan",
     description:

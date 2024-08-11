@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import { type MetaFunction } from "@remix-run/node";
 
 import { cn } from "~/utils/cn";
 import { Collaboration } from "~/components/content/home/collaboration";

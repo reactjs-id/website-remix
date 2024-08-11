@@ -1,6 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
-import { organizerData } from "~/data/about";
-import type { OrganizerType } from "~/types/about";
+import { type Organizer, organizerData } from "~/data/about";
 
 export const AboutOrganizer = () => {
   return (
@@ -26,7 +25,7 @@ export const AboutOrganizer = () => {
   );
 };
 
-const OrganizerCard = ({ fullName, image, role }: OrganizerType) => {
+const OrganizerCard = ({ fullName, image, role }: Organizer) => {
   return (
     <article className="flex flex-row items-center gap-4">
       <Avatar className="size-12 lg:size-16">

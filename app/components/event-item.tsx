@@ -51,7 +51,7 @@ function EventItem({
   image,
 }: EventType) {
   return (
-    <article className="flex items-start gap-4 md:gap-10 flex-col-reverse md:flex-row py-4 md:p-6">
+    <article className="flex items-start gap-4 md:gap-10 flex-col-reverse md:flex-row py-4 md:p-6 rounded-2xl bg-brand-black-granite/10">
       <div className="flex flex-col gap-1 lg:gap-3 w-full max-w-3xl justify-center">
         <div className="text-xs lg:text-xl flex flex-col text-brand-gray-cool">
           <p>
@@ -61,7 +61,7 @@ function EventItem({
         </div>
         <h3 className="text-lg lg:text-4xl font-medium text-white">{title}</h3>
         <div className="flex flex-row flex-wrap gap-2">
-          {people.map(({ image, name, role }) => (
+          {people?.map(({ image, name, role }) => (
             <div className="flex flex-row items-center gap-2" key={name}>
               <Avatar className="size-8 lg:size-10">
                 <AvatarImage src={image} alt={`${name}'s profile`} />

@@ -14,7 +14,10 @@ export const EventSoon = () => {
             { title, city, date, location, image, people, peopleInterested },
             index,
           ) => (
-            <li key={`${title}-${index}`} className="flex flex-col w-full">
+            <li
+              key={`${title}-${index}`}
+              className="flex flex-col w-full gap-2"
+            >
               <h3 className="font-medium text-xl md:text-3xl md:py-2">
                 {city}, {dayjs(date).format("DD MMMM")}
               </h3>

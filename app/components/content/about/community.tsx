@@ -6,9 +6,10 @@ export const AboutCommunity = () => {
       </h2>
       <p className="md:text-2xl">
         Dengan lebih dari <strong className="font-bold">50.000 anggota</strong>{" "}
-        di channel Telegram, ReactJS ID adalah salah satu komunitas terbesar dan
-        paling aktif di Indonesia. Kami bangga dapat menyediakan platform bagi
-        para developer untuk berinteraksi, belajar, dan tumbuh bersama.
+        di channel Telegram, ReactJS Indonesia adalah salah satu komunitas
+        terbesar dan paling aktif di Indonesia. Kami bangga dapat menyediakan
+        platform bagi para developer untuk berinteraksi, belajar, dan tumbuh
+        bersama.
       </p>
     </section>
   );

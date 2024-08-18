@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { EventItem } from "~/components/event-item";
+import { EventItem } from "~/components/shared/event-item";
 import { eventsSoonData } from "~/data/events";
 
 export const EventSoon = () => {

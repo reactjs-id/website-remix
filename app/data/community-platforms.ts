@@ -1,26 +1,36 @@
-import { siFacebook, siMeetup, siTelegram, siX } from "simple-icons";
+import {
+  siFacebook,
+  siMeetup,
+  siTelegram,
+  siX,
+  type SimpleIcon,
+} from "simple-icons";
 
-const communityPlatforms = [
+type CommunityPlatform = {
+  url: string;
+  text: string;
+  icon: SimpleIcon;
+};
+
+export const communityPlatforms: CommunityPlatform[] = [
   {
-    link: "https://t.me/react_idn",
-    text: "Masuk ke Channel Telegram",
+    url: "https://t.me/react_idn",
+    text: "Masuk ke grup Telegram",
     icon: siTelegram,
   },
   {
-    link: "https://www.meetup.com/reactindonesia",
-    text: "Masuk ke Grup Meetup",
+    url: "https://meetup.com/reactindonesia",
+    text: "Masuk ke Meetup.com",
     icon: siMeetup,
   },
   {
-    link: "https://www.facebook.com/groups/442974152553174",
-    text: "Masuk ke Grup Facebook",
+    url: "https://facebook.com/groups/442974152553174",
+    text: "Masuk ke grup Facebook",
     icon: siFacebook,
   },
   {
-    link: "https://x.com/reactjsid",
-    text: "Follow di Twitter",
+    url: "https://x.com/reactjsid",
+    text: "Follow di X (Twitter)",
     icon: siX,
   },
 ];
-
-export default communityPlatforms;

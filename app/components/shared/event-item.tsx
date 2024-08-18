@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { CalendarFold } from "lucide-react";
 import { EventType } from "~/types/events";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 
 type EventHomeItemProps = {
   title: string;
@@ -10,7 +10,7 @@ type EventHomeItemProps = {
   imgUrl: string;
 };
 
-function EventHomeItem({
+export function EventHomeItem({
   title,
   date,
   description,
@@ -41,7 +41,7 @@ function EventHomeItem({
   );
 }
 
-function EventItem({
+export function EventItem({
   location,
   city,
   date,
@@ -100,7 +100,7 @@ function EventItem({
   );
 }
 
-const fakerEvents = [
+export const fakerEvents = [
   {
     title: "Meetup IRL #24",
     date: "Kamis depan - pkl 2.00 siang",
@@ -123,5 +123,3 @@ const fakerEvents = [
     imgUrl: "https://picsum.photos/seed/picsum/340/190",
   },
 ];
-
-export { EventHomeItem, EventItem, fakerEvents };

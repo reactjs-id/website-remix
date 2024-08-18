@@ -2,20 +2,27 @@ import { Link } from "@remix-run/react";
 import { AlignRight } from "lucide-react";
 
 import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
-import { Navigation, navigationItems } from "./navigation";
-import BackgroundGradient from "../background-gradient";
+import { Navigation, navigationItems } from "~/components/shared/navigation";
+import { BackgroundGradient } from "~/components/shared/background-gradient";
 
 export function SiteNavigation() {
   return (
     <div className="flex justify-center items-center">
       <BackgroundGradient />
+
       <nav className="container !p-4 !lg:p-8 items-center">
         <Link to="/" className="text-xl font-bold">
-          ReactJS ID
+          <img
+            src="/images/reactjsid.svg"
+            alt="ReactJS Indonesia Logo"
+            className="w-16 h-9 object-contain object-left"
+          />
         </Link>
+
         <div className="hidden lg:block">
           <Navigation className="gap-[75px]" />
         </div>
+
         <div className="block lg:hidden">
           <Sheet>
             <SheetTrigger>

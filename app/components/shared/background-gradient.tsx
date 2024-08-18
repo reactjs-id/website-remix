@@ -1,6 +1,6 @@
 import { cn } from "~/utils/cn";
 
-export default function BackgroundGradient() {
+export function BackgroundGradient() {
   return (
     <div
       className={cn(

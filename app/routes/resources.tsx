@@ -2,7 +2,9 @@ import { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Resource ReactJS Indonesia - Tutorials, Guides, and Community" },
+    {
+      title: "Resource ReactJS Indonesia - Tutorials, Guides, and Community",
+    },
     {
       property: "og:title",
       content: "Resource ReactJS Indonesia - Tutorials, Guides, and Community",

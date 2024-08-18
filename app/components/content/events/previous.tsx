@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { Search } from "lucide-react";
-import { EventItem } from "~/components/event-item";
+import { EventItem } from "~/components/shared/event-item";
 import { Input } from "~/components/ui/input";
 import {
   Select,

@@ -1,9 +1,11 @@
-import { Spacer } from "~/components/spacer";
 import { MoveRight } from "lucide-react";
-import { EventItem, fakerEvents } from "~/components/event-item";
-import { Button } from "~/components/ui/button";
 
-export default function Networking() {
+import { Spacer } from "~/components/ui/spacer";
+import { EventHomeItem, fakerEvents } from "~/components/shared/event-item";
+import { Button } from "~/components/ui/button";
+import { Link } from "@remix-run/react";
+
+export function Networking() {
   return (
     <section className="container !p-4 !lg:p-8">
       <div className="flex items-start flex-col grow">
@@ -18,7 +20,7 @@ export default function Networking() {
               </span>
               <img
                 className="mb-1"
-                src="./images/logos/reactjsid.svg"
+                src="/images/reactjsid.svg"
                 alt="reactjs.id logo"
                 style={{ width: 44, height: 23 }}
               />
@@ -188,15 +190,20 @@ export default function Networking() {
 
         <div className="flex flex-col justify-center gap-8 lg:gap-[52px] grow self-stretch">
           {fakerEvents.map((event, index) => (
-            <EventItem key={index} {...event} />
+            <EventHomeItem key={index} {...event} />
           ))}
         </div>
 
         <Spacer size="xs" />
 
-        <Button className="bg-brand-black-washed border border-brand-black-granite justify-start text-center px-4 lg:px-9 py-6 lg:!py-[28px] rounded-2xl">
-          <span className="text-base lg:text-xl">Lihat semua acara</span>
-          <MoveRight className="ml-2" />
+        <Button
+          asChild
+          className="bg-brand-black-washed border border-brand-black-granite justify-start text-center px-4 lg:px-9 py-6 lg:!py-[28px] rounded-2xl"
+        >
+          <Link to="/events">
+            <span className="text-base lg:text-xl">Lihat semua acara</span>
+            <MoveRight className="ml-2" />
+          </Link>
         </Button>
       </div>
     </section>

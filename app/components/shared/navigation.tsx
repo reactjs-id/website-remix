@@ -1,5 +1,7 @@
 import { Link } from "@remix-run/react";
 
+import { cn } from "~/utils/cn";
+
 export const navigationItems = [
   { path: "/about", text: "Tentang Kami" },
   { path: "/blog", text: "Blog" },
@@ -11,7 +13,7 @@ export const navigationItems = [
 
 export function Navigation({ className = "" }: { className: string }) {
   return (
-    <ul className={`flex ${className} text-slate-400`}>
+    <ul className={cn("flex text-slate-400", className)}>
       {navigationItems.map((navItem) => (
         <li key={navItem.path}>
           <Link to={navItem.path}>{navItem.text}</Link>

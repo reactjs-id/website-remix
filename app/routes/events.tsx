@@ -2,7 +2,7 @@ import { MetaFunction } from "@remix-run/node";
 import { EventGeneral } from "~/components/content/events/general";
 import { EventPrevious } from "~/components/content/events/previous";
 import { EventSoon } from "~/components/content/events/soon";
-import { Line } from "~/components/line";
+import { Line } from "~/components/ui/line";
 
 export const meta: MetaFunction = () => {
   return [

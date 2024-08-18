@@ -2,6 +2,7 @@ import { MoveRight } from "lucide-react";
 
 import { Spacer } from "~/components/ui/spacer";
 import { EventHomeItem, fakerEvents } from "~/components/shared/event-item";
+import { EventItem, fakerEvents } from "~/components/shared/event-item";
 import { Button } from "~/components/ui/button";
 import { Link } from "@remix-run/react";
 
@@ -191,6 +192,7 @@ export function Networking() {
         <div className="flex flex-col justify-center gap-8 lg:gap-[52px] grow self-stretch">
           {fakerEvents.map((event, index) => (
             <EventHomeItem key={index} {...event} />
+            <EventItem key={index} {...event} />
           ))}
         </div>
 

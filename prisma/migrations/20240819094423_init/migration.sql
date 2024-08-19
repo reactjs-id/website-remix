@@ -1,14 +1,5 @@
-/*
-  Warnings:
-
-  - You are about to drop the `Event` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropTable
-DROP TABLE "Event";
-
 -- CreateTable
-CREATE TABLE "Events" (
+CREATE TABLE "Event" (
     "id" TEXT NOT NULL,
     "slug" TEXT NOT NULL,
     "title" TEXT NOT NULL,
@@ -19,13 +10,13 @@ CREATE TABLE "Events" (
     "description" TEXT NOT NULL,
     "locationName" TEXT NOT NULL,
     "locationAddress" TEXT NOT NULL,
-    "eventAgendas" TEXT[],
-    "registration" TEXT NOT NULL,
+    "agendas" TEXT[],
+    "registrationInfo" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "Events_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "Event_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Events_slug_key" ON "Events"("slug");
+CREATE UNIQUE INDEX "Event_slug_key" ON "Event"("slug");

@@ -11,20 +11,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Events {
+model Event {
   id String @id @default(cuid())
 
-  slug            String   @unique
-  title           String   @db.Text
-  imageUrl        String
-  dateTimeStart   DateTime @default(now())
-  dateTimeEnd     DateTime @default(now())
-  url             String // Url for online or hybrid
-  description     String   @db.Text
-  locationName    String
-  locationAddress String
-  eventAgendas    String[]
-  registration    String   @db.Text
+  slug             String   @unique
+  title            String   @db.Text
+  imageUrl         String
+  dateTimeStart    DateTime @default(now())
+  dateTimeEnd      DateTime @default(now())
+  url              String // Url for online or hybrid
+  description      String   @db.Text
+  locationName     String
+  locationAddress  String
+  agendas          String[]
+  registrationInfo String   @db.Text
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

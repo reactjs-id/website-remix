@@ -5,15 +5,18 @@ import { prisma } from "~/utils/db.server";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   if (!params.slug) {
-    throw new Error("Missing eventid param");
+    throw new Error("Missing event slug");
   }
-  const event = await prisma.events.findFirst({
+  const event = await prisma.event.findFirst({
     where: {
       slug: params.slug,
     },
   });
   if (!event) {
-    throw new Response("Not Found", { status: 404 });
+    throw new Response(null, {
+      status: 404,
+      statusText: "Event Not Found",
+    });
   }
   return json({ event });
 };

@@ -8,5 +8,3 @@ node_modules
 # Local Netlify folder
 .netlify
 .DS_Store
-/prisma/docs
-prisma/credentials

@@ -1,18 +1,21 @@
+import dayjs from "dayjs";
 import { CalendarFold } from "lucide-react";
+import { EventType } from "~/types/events";
+import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 
-type EventItemProps = {
+type EventHomeItemProps = {
   title: string;
   date: string;
   description: string;
   imgUrl: string;
 };
 
-export function EventItem({
+export function EventHomeItem({
   title,
   date,
   description,
   imgUrl,
-}: EventItemProps) {
+}: EventHomeItemProps) {
   return (
     <div className="flex items-center gap-1 lg:gap-10 flex-col lg:flex-row">
       <img
@@ -35,6 +38,65 @@ export function EventItem({
         </p>
       </div>
     </div>
+  );
+}
+
+export function EventItem({
+  location,
+  city,
+  date,
+  title,
+  people,
+  peopleInterested,
+  image,
+}: EventType) {
+  return (
+    <article className="flex items-start gap-4 md:gap-10 flex-col-reverse md:flex-row py-4 md:p-6 rounded-2xl bg-brand-black-granite/10">
+      <div className="flex flex-col gap-1 lg:gap-3 w-full max-w-3xl justify-center">
+        <div className="text-xs lg:text-xl flex flex-col text-brand-gray-cool">
+          <p>
+            {location}, {city}
+          </p>
+          <time>{dayjs(date).format("DD MMMM YYYY, HH:mm")}</time>
+        </div>
+        <h3 className="text-lg lg:text-4xl font-medium text-white">{title}</h3>
+        <div className="flex flex-row flex-wrap gap-2">
+          {people?.map(({ image, name, role }) => (
+            <div className="flex flex-row items-center gap-2" key={name}>
+              <Avatar className="size-8 lg:size-10">
+                <AvatarImage src={image} alt={`${name}'s profile`} />
+                <AvatarFallback>{name[0].toUpperCase()}</AvatarFallback>
+              </Avatar>
+              <div className="flex flex-col font-medium text-sm md:text-base">
+                <h3>{name}</h3>
+                <p className="text-brand-gray-lavender/40">{role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-col md:flex-row md:items-center">
+          <div className="flex flex-row">
+            {[...Array(peopleInterested > 8 ? 8 : peopleInterested).keys()].map(
+              (_, index) => (
+                <div
+                  className={`bg-brand-gray-cool w-8 h-8 rounded-full border-4 border-brand-black-mamba ${index !== 0 ? "-ml-3" : ""}`}
+                  key={index}
+                />
+              ),
+            )}
+          </div>
+          <p className="pl-1 md:pl-2 lg:pl-4 text-xs lg:text-xl">
+            {peopleInterested > 20 ? `${peopleInterested}+` : peopleInterested}{" "}
+            orang tertarik dengan event ini
+          </p>
+        </div>
+      </div>
+      <img
+        src={image}
+        alt={title}
+        className="aspect-video w-full md:w-60 lg:w-80 xl:w-96 rounded-2xl object-cover drop-shadow-[0_4px_20px_0_rgba(17,29,44,0.48)]"
+      />
+    </article>
   );
 }
 

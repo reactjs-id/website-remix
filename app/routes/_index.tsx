@@ -1,11 +1,11 @@
 import { type MetaFunction } from "@remix-run/node";
 
-import { cn } from "~/utils/cn";
-import { Collaboration } from "~/components/content/home/collaboration";
 import { heroPhotos } from "~/data/hero-photos";
 import { JoinCommunity } from "~/components/shared/join-community";
 import { Networking } from "~/components/content/home/networking";
+import { Collaboration } from "~/components/content/home/collaboration";
 import { Spacer } from "~/components/ui/spacer";
+import { cn } from "~/utils/cn";
 
 export const meta: MetaFunction = () => {
   return [
@@ -84,10 +84,7 @@ export default function IndexRoute() {
       <Spacer />
       <Networking />
       <Spacer />
-
-      <section className="w-full max-w-6xl mx-auto text-center mt-20 lg:mt-52">
-        <Collaboration />
-      </section>
+      <Collaboration />
 
       <img
         src="/images/icon-rocket.svg"
